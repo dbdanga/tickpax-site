@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TickPax – AI Engineering Effort Intelligence for Engineering Teams</title>
+  <meta name="description" content="TickPax is an AI engineering intelligence platform. Turn commits, pull requests, work items, and delivery signals into explainable effort insights, recovered engineering hours, and audit-ready delivery intelligence." />
+  <meta name="keywords" content="AI engineering intelligence, AI engineering productivity, engineering effort tracking, engineering intelligence platform, recover engineering hours, one-click install extension, AI software delivery analytics, AI time recovery" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TickPax – AI Engineering Effort Intelligence for Engineering Teams" />
+  <meta property="og:description" content="Turn engineering activity into intelligence. TickPax uses AI to recover engineering effort, explain where time goes, and create trusted, audit-ready delivery insights." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tickpax.com" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tickpax.com" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <meta property="og:image" content="assets/icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TickPax",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "AI Engineering Effort Intelligence platform for engineering teams. Turns delivery activity into recovered engineering effort, explainable AI insights, and audit-ready delivery intelligence.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "13",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <header class="nav-header" id="nav-header">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo" aria-label="TickPax home">
+        <img src="assets/icon.png" alt="" class="logo-mark" width="32" height="32" />
+        <span class="logo-text">TickPax</span>
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Primary">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#audiences">Who It's For</a>
+        <a href="#why">Why TickPax</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#early-access" class="btn btn-ghost">Request Early Access</a>
+        <a href="#pricing" class="btn btn-primary btn-sm">Start Free Trial</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+    <nav>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#audiences">Who It's For</a>
+      <a href="#why">Why TickPax</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#early-access">Early Access</a>
+      <a href="#pricing" class="btn btn-primary" style="margin-top:1rem;display:inline-block;">Start Free Trial</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="hero" aria-labelledby="hero-headline">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="container hero-inner">
+
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          AI Engineering Effort Intelligence · Built for Engineering Teams
+        </div>
+
+        <h1 id="hero-headline" class="hero-headline">
+          Turn Engineering Activity<br />
+          Into <span class="gradient-text">Engineering Intelligence</span>
+        </h1>
+
+        <p class="hero-sub">
+          TickPax uses AI to analyze commits, pull requests, work items, and delivery signals — recovering engineering effort, explaining where time goes, and creating trusted effort insights your organization can act on.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary btn-lg">
+            Start Free Trial
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#early-access" class="btn btn-outline btn-lg">
+            Request Early Access
+          </a>
+        </div>
+
+        <p class="hero-disclaimer">One-click install · Human-controlled AI · Free up to 5 users</p>
+
+        <!-- Hero metric strip -->
+        <div class="hero-metrics" aria-label="Engineering intelligence at a glance">
+          <div class="hero-metric">
+            <span class="hm-value"><span class="hm-num" id="metric-hours">1,250</span><span class="hm-unit">h</span></span>
+            <span class="hm-label">Engineering effort recovered</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hm-value"><span class="hm-num" id="metric-value">$125,000</span></span>
+            <span class="hm-label">Estimated recovered value</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hm-value"><span class="hm-num" id="metric-accept">87</span><span class="hm-unit">%</span></span>
+            <span class="hm-label">AI proposal acceptance</span>
+          </div>
+        </div>
+
+        <!-- Product Dashboard Mockup -->
+        <div class="hero-dashboard" aria-label="TickPax engineering intelligence dashboard preview">
+          <div class="dashboard-chrome">
+            <div class="dashboard-chrome-bar">
+              <span class="chrome-dot red"></span>
+              <span class="chrome-dot yellow"></span>
+              <span class="chrome-dot green"></span>
+              <span class="chrome-title">TickPax · Engineering Effort Intelligence</span>
+            </div>
+            <div class="dashboard-body dashboard-body-image">
+              <img
+                src="assets/recovered_engineering.png"
+                alt="TickPax Recovered Engineering insights inside your engineering platform — cumulative recovered hours over time, with recovered hours, estimated value, and AI acceptance rate"
+                class="dashboard-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <!-- Floating insight card -->
+          <div class="hero-insight-card" aria-hidden="true">
+            <div class="insight-header">
+              <span class="insight-icon">◆</span>
+              AI Reasoning
+            </div>
+            <p class="insight-body">The AI recovered 810 minutes of active developer time across 4 work items with an average confidence score of 87%. The work primarily involved CodeCommit developer activities. A notable 91-minute gap was observed, potentially due to a meeting or an extended focus period.</p>
+            <div class="insight-confidence">
+              <span>Confidence</span>
+              <div class="confidence-bar"><div class="confidence-fill" style="width:87%"></div></div>
+              <span>87%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LOGOS / SOCIAL PROOF BAR
+    ============================================================ -->
+    <section class="proof-bar" aria-label="Built for engineering ecosystems">
+      <div class="container proof-inner">
+        <p class="proof-label">Built for the teams that ship software</p>
+        <div class="proof-logos">
+          <div class="proof-logo-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            DevOps Platforms
+          </div>
+          <div class="proof-logo-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/></svg>
+            Software Consultancies
+          </div>
+          <div class="proof-logo-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Enterprise Engineering
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROBLEM
+    ============================================================ -->
+    <section class="problem section section-light" id="problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-label">The Problem</div>
+        <h2 id="problem-title" class="section-headline">
+          Engineering teams generate massive amounts of delivery data —<br />
+          but organizations still cannot see the <em>full effort</em> behind it.
+        </h2>
+        <p class="section-sub">
+          Every day, teams create commits, pull requests, reviews, work item updates, and development activity. The signal is everywhere. The understanding is not.
+        </p>
+
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>Hidden effort disappears</h3>
+            <p>Important engineering work is completed but never captured — commits without work item links, fixes between sprints, and review effort that no timesheet ever records.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Reporting depends on memory</h3>
+            <p>Developers reconstruct their week manually, days after the work was done. The result is incomplete, inconsistent, and impossible to verify against what actually happened.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+            </div>
+            <h3>Managers lack confidence</h3>
+            <p>Leadership sees activity dashboards, but not the true engineering effort behind them — making capacity, billing, and investment decisions on incomplete data.</p>
+          </div>
+        </div>
+
+        <!-- Data signals strip -->
+        <div class="signal-strip">
+          <div class="signal-item">
+            <span class="signal-icon commit">⬡</span>
+            <span>Commits</span>
+          </div>
+          <div class="signal-sep">+</div>
+          <div class="signal-item">
+            <span class="signal-icon pr">⬡</span>
+            <span>Pull Requests</span>
+          </div>
+          <div class="signal-sep">+</div>
+          <div class="signal-item">
+            <span class="signal-icon wi">⬡</span>
+            <span>Work Items</span>
+          </div>
+          <div class="signal-sep">+</div>
+          <div class="signal-item">
+            <span class="signal-icon review">⬡</span>
+            <span>Code Reviews</span>
+          </div>
+          <div class="signal-sep">=</div>
+          <div class="signal-item result">
+            <span class="signal-icon ai-sig">◆</span>
+            <span>Engineering Intelligence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SOLUTION / HOW IT WORKS
+    ============================================================ -->
+    <section class="how-it-works section section-dark" id="how-it-works" aria-labelledby="hiw-title">
+      <div class="container">
+        <div class="section-label">The Solution</div>
+        <h2 id="hiw-title" class="section-headline">From engineering activity to measurable effort</h2>
+        <p class="section-sub">TickPax never silently posts unverified time. AI proposes, teams validate, and the organization learns — turning raw delivery telemetry into intelligence everyone can trust.</p>
+
+        <div class="solution-flow">
+          <div class="flow-node">
+            <span class="flow-node-num">01</span>
+            <div class="flow-node-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M6 9v6"/><circle cx="18" cy="18" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/></svg>
+            </div>
+            <h3>Engineering Signals</h3>
+            <p>Commits, pull requests, reviews, and work item changes are captured directly from your organization.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node">
+            <span class="flow-node-num">02</span>
+            <div class="flow-node-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>AI Analysis Engine</h3>
+            <p>Signals are correlated and clustered, effort is estimated per work item, and each proposal receives a confidence score.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node">
+            <span class="flow-node-num">03</span>
+            <div class="flow-node-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 11l4-4 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 18h20" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Effort Intelligence</h3>
+            <p>Activity becomes explainable effort: what work happened, how much it represented, and where capacity was invested.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node">
+            <span class="flow-node-num">04</span>
+            <div class="flow-node-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Human Review</h3>
+            <p>Engineers accept, adjust, or reject every proposal with full reasoning. Nothing is recorded without approval.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node flow-node-final">
+            <span class="flow-node-num">05</span>
+            <div class="flow-node-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Trusted Records</h3>
+            <p>Approved entries become audit-ready records, each traceable to the engineering activity that generated it.</p>
+          </div>
+        </div>
+
+        <div class="solution-mantra">
+          <span class="mantra-item">AI <strong>proposes.</strong></span>
+          <span class="mantra-dot">·</span>
+          <span class="mantra-item">Teams <strong>validate.</strong></span>
+          <span class="mantra-dot">·</span>
+          <span class="mantra-item">Organizations <strong>learn.</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CORE PRODUCT CAPABILITIES
+    ============================================================ -->
+    <section class="features section section-light" id="capabilities" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-label">Core Capabilities</div>
+        <h2 id="features-title" class="section-headline">Engineering intelligence, built for how teams actually work</h2>
+
+        <!-- Capability 1: AI Engineering Effort Recovery -->
+        <div class="feature-block">
+          <div class="feature-text">
+            <div class="feature-tag">AI Engineering Effort Recovery</div>
+            <h3>Recover engineering work that disappears in traditional reporting</h3>
+            <p>TickPax reads real delivery activity inside your engineering platform and generates AI effort proposals based on what was actually done — not estimates or memory. Review daily, weekly, or on a calendar.</p>
+            <ul class="feature-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                AI-generated daily and weekly effort proposals
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Calendar-based review and confirmation
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Work item association and context
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Deduplicated against existing manual logs
+              </li>
+            </ul>
+          </div>
+          <div class="feature-visual feature-visual-floating">
+            <div class="feature-screenshot" aria-label="AI daily effort recovery recommendation">
+              <div class="screenshot-placeholder screenshot-placeholder-image">
+                <img
+                  src="assets/recovered_daily.png"
+                  alt="TickPax AI Recommendations — a daily recovered time entry of 1.5 hours for a feature work item, with 85% AI confidence and a Confirm &amp; Log action"
+                  class="screenshot-image"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="hero-insight-card feature-insight-card" aria-hidden="true">
+              <div class="insight-header">
+                <span class="insight-icon">◆</span>
+                AI Reasoning
+              </div>
+              <p class="insight-body">The AI recovered 90 minutes of active developer time across one work item with an average confidence of 85%. The primary activity involved code commits, indicating focused development work. The activity was continuous with no significant gaps identified.</p>
+              <div class="insight-confidence">
+                <span>Confidence</span>
+                <div class="confidence-bar"><div class="confidence-fill" style="width:85%"></div></div>
+                <span>85%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capability 2: Recovered Engineering ROI -->
+        <div class="feature-block reverse">
+          <div class="feature-text">
+            <div class="feature-tag">Recovered Engineering ROI</div>
+            <h3>Measure the business value of recovered effort</h3>
+            <p>The Recovered Engineering report charts cumulative AI-recovered hours over any range and converts them into measurable business impact — total hours, estimated value, and AI acceptance rate.</p>
+            <ul class="feature-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Cumulative recovered-hours trend by day, week, or month
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Estimated value at your organization's hourly rate
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                AI acceptance rate across actioned proposals
+              </li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="roi-panel" aria-label="Recovered Engineering ROI dashboard">
+              <div class="roi-panel-header">
+                <span class="ph-dot"></span> Recovered Engineering · Jan 2026 – Jun 2026
+              </div>
+              <div class="roi-stats">
+                <div class="roi-stat">
+                  <span class="roi-stat-label">Recovered Hours</span>
+                  <span class="roi-stat-value">1,250<span class="roi-unit">h</span></span>
+                </div>
+                <div class="roi-stat highlight">
+                  <span class="roi-stat-label">Estimated Value</span>
+                  <span class="roi-stat-value">$125,000</span>
+                </div>
+                <div class="roi-stat">
+                  <span class="roi-stat-label">AI Acceptance Rate</span>
+                  <span class="roi-stat-value">87<span class="roi-unit">%</span></span>
+                </div>
+              </div>
+              <div class="roi-chart" aria-hidden="true">
+                <div class="roi-chart-title">Recovered Hours (Cumulative)</div>
+                <svg class="roi-area" viewBox="0 0 600 220" role="img">
+                  <defs>
+                    <linearGradient id="roiAreaFill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="rgba(0,120,212,0.32)" />
+                      <stop offset="100%" stop-color="rgba(0,120,212,0)" />
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Gridlines + y-axis labels (0h–200h) -->
+                  <g class="roi-grid">
+                    <line x1="40" y1="10"  x2="590" y2="10" />
+                    <line x1="40" y1="55"  x2="590" y2="55" />
+                    <line x1="40" y1="100" x2="590" y2="100" />
+                    <line x1="40" y1="145" x2="590" y2="145" />
+                    <line x1="40" y1="190" x2="590" y2="190" />
+                  </g>
+                  <g class="roi-ylabels">
+                    <text x="34" y="13">200h</text>
+                    <text x="34" y="58">150h</text>
+                    <text x="34" y="103">100h</text>
+                    <text x="34" y="148">50h</text>
+                    <text x="34" y="193">0h</text>
+                  </g>
+
+                  <!-- Cumulative area + line -->
+                  <path class="roi-area-fill" d="M40,176.5 C95,176.5 95,154 150,154 C205,154 205,129.7 260,129.7 C315,129.7 315,95.5 370,95.5 C425,95.5 425,53.2 480,53.2 C535,53.2 535,19 590,19 L590,190 L40,190 Z" />
+                  <path class="roi-area-line" d="M40,176.5 C95,176.5 95,154 150,154 C205,154 205,129.7 260,129.7 C315,129.7 315,95.5 370,95.5 C425,95.5 425,53.2 480,53.2 C535,53.2 535,19 590,19" />
+
+                  <!-- x-axis labels -->
+                  <g class="roi-xlabels">
+                    <text x="40"  y="208" text-anchor="start">Jan 2026</text>
+                    <text x="150" y="208" text-anchor="middle">Feb 2026</text>
+                    <text x="260" y="208" text-anchor="middle">Mar 2026</text>
+                    <text x="370" y="208" text-anchor="middle">Apr 2026</text>
+                    <text x="480" y="208" text-anchor="middle">May 2026</text>
+                    <text x="590" y="208" text-anchor="end">Jun 2026</text>
+                  </g>
+                </svg>
+              </div>
+              <p class="roi-caption">TickPax converts engineering activity into measurable business impact.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capability 3: Untracked Work Recovery -->
+        <div class="feature-block">
+          <div class="feature-text">
+            <div class="feature-tag">Untracked Work Recovery</div>
+            <h3>Find engineering work that was never properly captured</h3>
+            <p>Commits that arrive with no linked work item are recovered as orphan proposals instead of being dropped. Attribute them, and TickPax writes the work back into your engineering platform for you.</p>
+            <ul class="feature-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Discover commits without work item linkage
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Create or link work items from recovered activity
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Attach source commits and post completed work back
+              </li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="feature-screenshot" aria-label="Untracked work recovery preview">
+              <div class="screenshot-placeholder screenshot-placeholder-image">
+                <img
+                  src="assets/recovered_untracked.png"
+                  alt="TickPax untracked work recovery — a 1.5 hour recommended entry flagged as untracked with no linked work item, prompting the user to create or link a work item, recovered from refs/pull/10/merge at 95% AI confidence"
+                  class="screenshot-image"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capability 4: Explainable AI -->
+        <div class="feature-block reverse">
+          <div class="feature-text">
+            <div class="feature-tag">Explainable AI</div>
+            <h3>AI suggestions you can understand and trust</h3>
+            <p>Every recommendation is traceable. Engineers and auditors see the exact signals, the reasoning, the confidence, and a proposed-versus-actual comparison. No black-box automation.</p>
+            <ul class="feature-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Supporting activity and digital-footprint evidence
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Per-proposal confidence and heuristic method
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Proposed versus actual effort comparison
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Full activity audit trail per record
+              </li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="feature-screenshot" aria-label="Explainable AI evidence preview">
+              <div class="screenshot-placeholder screenshot-placeholder-image screenshot-stack">
+                <img
+                  src="assets/digital_footprint.png"
+                  alt="TickPax Digital Footprint Timeline — code review PR interactions and AI-adjusted offline deep-focus work detected from activity gaps"
+                  class="screenshot-image"
+                  loading="lazy"
+                />
+                <img
+                  src="assets/740.png"
+                  alt="Development activity evidence — feature and billing work items with the source code activity the AI used to estimate effort"
+                  class="screenshot-image"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capability 5: Workflow Native -->
+        <div class="feature-block">
+          <div class="feature-text">
+            <div class="feature-tag">Workflow Native</div>
+            <h3>Built inside the engineering workflow</h3>
+            <p>TickPax installs in one click and runs inside your project hubs, work item forms, boards, and repositories. No separate platform. No workflow disruption.</p>
+            <ul class="feature-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Project hubs: Time Recovery, Calendar, Insights
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Work item tab for in-context logging
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Boards and repository activity as signal sources
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Organization-scoped controls and permissions
+              </li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="feature-screenshot" aria-label="Workflow-native experience preview">
+              <div class="screenshot-placeholder screenshot-placeholder-image">
+                <img
+                  src="assets/wi_details.png"
+                  alt="TickPax tab inside a work item — User Story 249 showing 1.5h logged hours, a billable testing time log, and a 1.5h AI-proposed entry alongside the native Details and history tabs"
+                  class="screenshot-image"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         AUDIENCES
+    ============================================================ -->
+    <section class="audiences section section-dark" id="audiences" aria-labelledby="audiences-title">
+      <div class="container">
+        <div class="section-label">Two Experiences</div>
+        <h2 id="audiences-title" class="section-headline">One platform. Built for the whole engineering organization.</h2>
+
+        <div class="audience-cards">
+          <!-- Engineers -->
+          <div class="audience-card">
+            <div class="audience-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="audience-tag">For Engineers</div>
+            <h3>Spend less time reporting work.</h3>
+            <p>TickPax reads your actual delivery activity and proposes your effort. You review, adjust, and approve — in minutes, not hours — with less administrative overhead.</p>
+            <ul class="audience-benefits">
+              <li>No manual reconstruction of your week</li>
+              <li>Work recovered from your real activity</li>
+              <li>Review before anything is approved</li>
+              <li>Full control over your own records</li>
+            </ul>
+          </div>
+
+          <!-- Engineering Leaders -->
+          <div class="audience-card accent-card">
+            <div class="audience-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+            </div>
+            <div class="audience-tag">For Engineering Leaders</div>
+            <h3>Understand where engineering effort creates value.</h3>
+            <p>TickPax gives delivery and operations leaders accurate, consistent effort intelligence — linked directly to your work items and delivery outcomes.</p>
+            <ul class="audience-benefits">
+              <li>Delivery visibility across teams and projects</li>
+              <li>Billable vs non-billable analysis</li>
+              <li>Effort trends and ROI reporting</li>
+              <li>Audit readiness with full traceability</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         AI ADVANTAGE
+    ============================================================ -->
+    <section class="advantage section section-light" id="advantage" aria-labelledby="advantage-title">
+      <div class="container advantage-inner">
+        <div class="advantage-text">
+          <div class="section-label">The AI Advantage</div>
+          <h2 id="advantage-title" class="section-headline">The more your teams use TickPax,<br />the smarter your effort intelligence becomes.</h2>
+          <p>TickPax is not a static model. It learns from every accepted proposal, every rejection, every adjustment, and your team's engineering patterns — building organization-specific intelligence that gets more accurate over time.</p>
+          <p>Software development is changing. Engineers now review AI-generated code, validate solutions, and manage increasingly complex workflows. TickPax provides the intelligence layer to understand modern engineering effort — not just hours, but the nature and value of the work.</p>
+        </div>
+        <div class="advantage-loop">
+          <div class="loop-input">
+            <span class="loop-icon">✓</span> Accepted proposals
+          </div>
+          <div class="loop-input">
+            <span class="loop-icon reject">✕</span> Rejected proposals
+          </div>
+          <div class="loop-input">
+            <span class="loop-icon">✎</span> Manual adjustments
+          </div>
+          <div class="loop-input">
+            <span class="loop-icon">⬡</span> Engineering patterns
+          </div>
+          <div class="loop-arrow" aria-hidden="true">↓</div>
+          <div class="loop-output">
+            <span class="loop-output-icon">◆</span>
+            Organization-specific effort intelligence
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY TICKPAX
+    ============================================================ -->
+    <section class="why section section-dark" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-label">Why TickPax</div>
+        <h2 id="why-title" class="section-headline">A new category — not another timesheet</h2>
+        <p class="section-sub">Traditional time tracking depends on memory and produces numbers nobody trusts. TickPax produces evidence-backed engineering intelligence.</p>
+
+        <div class="compare-grid">
+          <div class="compare-col compare-old">
+            <div class="compare-head">
+              <span class="compare-head-icon old">✕</span>
+              Traditional Timesheets
+            </div>
+            <ul>
+              <li><span class="ci old">✕</span> Memory-based reconstruction</li>
+              <li><span class="ci old">✕</span> Late, after-the-fact reporting</li>
+              <li><span class="ci old">✕</span> No supporting evidence</li>
+              <li><span class="ci old">✕</span> Low, unverifiable accuracy</li>
+              <li><span class="ci old">✕</span> Disconnected from the work system</li>
+            </ul>
+          </div>
+          <div class="compare-col compare-new">
+            <div class="compare-head">
+              <span class="compare-head-icon new">◆</span>
+              TickPax
+            </div>
+            <ul>
+              <li><span class="ci new">✓</span> Workflow-native</li>
+              <li><span class="ci new">✓</span> AI-assisted, generated from real activity</li>
+              <li><span class="ci new">✓</span> Evidence-backed and fully traceable</li>
+              <li><span class="ci new">✓</span> Human-controlled review and approval</li>
+              <li><span class="ci new">✓</span> Focused on measurable business value</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHO IT'S FOR
+    ============================================================ -->
+    <section class="fit section section-light" id="fit" aria-labelledby="fit-title">
+      <div class="container">
+        <div class="section-label">Who It's For</div>
+        <h2 id="fit-title" class="section-headline">Built for organizations where engineering effort matters</h2>
+
+        <div class="fit-cards">
+          <div class="fit-card featured">
+            <div class="fit-card-badge">Primary</div>
+            <div class="fit-card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Software Consultancies</h3>
+            <p>Recover missing billable effort, improve utilization visibility, and give clients accurate, traceable delivery reporting.</p>
+            <ul>
+              <li>Billable hour recovery</li>
+              <li>Utilization visibility</li>
+              <li>Client-level reporting</li>
+            </ul>
+          </div>
+          <div class="fit-card">
+            <div class="fit-card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Delivery &amp; DevOps Partners</h3>
+            <p>Add an intelligence layer after platform adoption and improve customer delivery visibility across engagements.</p>
+            <ul>
+              <li>Post-adoption intelligence</li>
+              <li>Customer delivery visibility</li>
+              <li>Native ecosystem alignment</li>
+            </ul>
+          </div>
+          <div class="fit-card">
+            <div class="fit-card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Enterprise Engineering Orgs</h3>
+            <p>Understand engineering investment, improve planning and reporting, and create consistent, audit-ready records across teams.</p>
+            <ul>
+              <li>Engineering investment insight</li>
+              <li>Cross-team consistency</li>
+              <li>Audit-ready records</li>
+            </ul>
+          </div>
+        </div>
+        <p class="fit-buyers">Trusted by <strong>CTOs</strong>, <strong>Engineering Directors</strong>, <strong>Delivery Managers</strong>, <strong>Engineering Operations Leaders</strong>, and <strong>PMO Leaders</strong>.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRICING
+    ============================================================ -->
+    <section class="pricing section section-dark" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-label">Pricing</div>
+        <h2 id="pricing-title" class="section-headline">Pricing that scales with your engineering teams</h2>
+        <p class="section-sub">Start free. Expand as adoption grows. No hidden fees.</p>
+
+        <div class="pricing-grid">
+          <!-- Free -->
+          <div class="pricing-card">
+            <div class="pricing-tier">Free</div>
+            <div class="pricing-price">
+              <span class="price-amount">$0</span>
+              <span class="price-period">forever</span>
+            </div>
+            <p class="pricing-tagline">For small teams evaluating TickPax.</p>
+            <ul class="pricing-features">
+              <li>Up to 5 users</li>
+              <li>AI effort proposals</li>
+              <li>Time Recovery &amp; Calendar</li>
+              <li>Work item integration</li>
+              <li class="disabled">Insights &amp; ROI reporting</li>
+              <li class="disabled">Untracked work recovery</li>
+              <li class="disabled">Export &amp; audit reports</li>
+            </ul>
+            <a href="#early-access" class="btn btn-outline btn-full">Get Started Free</a>
+          </div>
+
+          <!-- Basic -->
+          <div class="pricing-card">
+            <div class="pricing-tier">Basic</div>
+            <div class="pricing-price">
+              <span class="price-amount">$8</span>
+              <span class="price-period">/user/month</span>
+            </div>
+            <p class="pricing-tagline">For growing engineering teams.</p>
+            <ul class="pricing-features">
+              <li>Unlimited users</li>
+              <li>AI effort proposals</li>
+              <li>Untracked work recovery</li>
+              <li>Recovered Engineering ROI</li>
+              <li>Manager insights</li>
+              <li>Billable / non-billable analysis</li>
+              <li class="disabled">Unlimited time logs</li>
+            </ul>
+            <a href="#early-access" class="btn btn-outline btn-full">Start Free Trial</a>
+          </div>
+
+          <!-- Pro -->
+          <div class="pricing-card pricing-featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-tier">Pro</div>
+            <div class="pricing-price">
+              <span class="price-amount">$13</span>
+              <span class="price-period">/user/month</span>
+            </div>
+            <p class="pricing-tagline">For organizations scaling AI effort intelligence.</p>
+            <ul class="pricing-features">
+              <li>Everything in Basic</li>
+              <li>Highest AI proposal limits</li>
+              <li>Unlimited time logs</li>
+              <li>Full Insights suite</li>
+              <li>AI accuracy &amp; rejection analysis</li>
+              <li>State variance reporting</li>
+              <li>Export &amp; audit reports</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#pricing" class="btn btn-primary btn-full">Start Free Trial</a>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="pricing-card">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-price">
+              <span class="price-amount">Custom</span>
+            </div>
+            <p class="pricing-tagline">For large organizations and consulting firms.</p>
+            <ul class="pricing-features">
+              <li>Everything in Pro</li>
+              <li>Volume licensing</li>
+              <li>Dedicated onboarding</li>
+              <li>Multi-org management</li>
+              <li>Audit &amp; compliance pack</li>
+              <li>Executive reporting</li>
+              <li>SLA support</li>
+            </ul>
+            <a href="#early-access" class="btn btn-outline btn-full">Contact Sales</a>
+          </div>
+        </div>
+
+        <p class="pricing-note">All paid plans include a 14-day free trial. No credit card required to start.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TRUST
+    ============================================================ -->
+    <section class="trust section section-light" id="trust" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="section-label">Trust &amp; Control</div>
+        <h2 id="trust-title" class="section-headline">Intelligence you can stand behind in an audit</h2>
+        <p class="section-sub">TickPax is built around human control, transparent AI, and organizational data boundaries.</p>
+
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5l2 2 4-4"/></svg>
+            </div>
+            <h4>Security-Reviewed Extension</h4>
+            <p>Distributed through a trusted extension marketplace, subject to a rigorous extension security review process.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>Secure Organization-Based Access</h4>
+            <p>TickPax operates within your existing organization permissions. No external data exports required.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h4>User-Controlled AI Approval</h4>
+            <p>Every AI proposal must be reviewed and approved by the engineer before any record is created. No silent auto-posting.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h4>Audit-Ready Reporting</h4>
+            <p>Every approved record links back to the engineering activity that generated it — with proposal confidence, reasoning, and evidence.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            </div>
+            <h4>Transparent AI Reasoning</h4>
+            <p>Engineers and auditors see exactly what signals drove each proposal — commits, PRs, work items — with confidence and full explanation.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h4>Role-Based Governance</h4>
+            <p>Contributors own their submissions, managers gain visibility, and admins control organization-wide settings and seats.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INSTALL
+    ============================================================ -->
+    <section class="marketplace section section-dark" id="marketplace" aria-labelledby="marketplace-title">
+      <div class="container marketplace-inner">
+        <div class="marketplace-text">
+          <div class="marketplace-logo-row">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
+            One-Click Install
+          </div>
+          <h2 id="marketplace-title">Install in one click — no setup, no servers</h2>
+          <p>TickPax is a verified, security-reviewed extension. Add it to your organization in under two minutes — no infrastructure changes, no separate deployment.</p>
+          <div class="marketplace-steps">
+            <div class="ms-step"><span class="ms-num">1</span> Search for TickPax in your extension catalog</div>
+            <div class="ms-step"><span class="ms-num">2</span> Install it into your organization</div>
+            <div class="ms-step"><span class="ms-num">3</span> Configure team and project access</div>
+            <div class="ms-step"><span class="ms-num">4</span> Start recovering engineering intelligence</div>
+          </div>
+          <a href="#early-access" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
+            Install TickPax
+          </a>
+        </div>
+        <div class="marketplace-badge-area" aria-hidden="true">
+          <div class="marketplace-badge-card">
+            <div class="mb-header">Verified Extension</div>
+            <div class="mb-name">TickPax</div>
+            <div class="mb-meta">
+              <span>⬡ Security Reviewed</span>
+              <span>◆ AI-Powered</span>
+            </div>
+            <div class="mb-stat-row">
+              <span>Engineering Effort Intelligence</span>
+              <span>Compatible with all team tiers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EARLY ACCESS
+    ============================================================ -->
+    <section class="early-access section section-light" id="early-access" aria-labelledby="ea-title">
+      <div class="container ea-inner">
+        <div class="ea-text">
+          <div class="section-label">Early Access Program</div>
+          <h2 id="ea-title" class="section-headline">Join the TickPax Early Access Program</h2>
+          <p>We are onboarding selected engineering teams to help shape the future of AI engineering effort intelligence. Early access members get priority support, direct input into the roadmap, and special launch pricing.</p>
+
+          <div class="ea-perks">
+            <div class="ea-perk">
+              <span class="ea-perk-icon">◆</span>
+              Priority onboarding assistance
+            </div>
+            <div class="ea-perk">
+              <span class="ea-perk-icon">◆</span>
+              Direct product feedback channel
+            </div>
+            <div class="ea-perk">
+              <span class="ea-perk-icon">◆</span>
+              Early access pricing locked in at launch
+            </div>
+            <div class="ea-perk">
+              <span class="ea-perk-icon">◆</span>
+              Consultancy pilot program available
+            </div>
+          </div>
+        </div>
+
+        <form class="ea-form" id="early-access-form" novalidate aria-label="Early access application form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ea-name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="ea-name" name="name" placeholder="Jane Whitfield" required autocomplete="name" />
+              <span class="form-error" role="alert" id="ea-name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="ea-company">Company <span aria-hidden="true">*</span></label>
+              <input type="text" id="ea-company" name="company" placeholder="Northwind Engineering Ltd" required autocomplete="organization" />
+              <span class="form-error" role="alert" id="ea-company-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ea-email">Work Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="ea-email" name="email" placeholder="jane@northwind.dev" required autocomplete="email" />
+            <span class="form-error" role="alert" id="ea-email-error"></span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ea-role">Your Role</label>
+              <select id="ea-role" name="role">
+                <option value="">Select role</option>
+                <option value="cto">CTO</option>
+                <option value="eng-director">Engineering Director</option>
+                <option value="delivery-manager">Delivery Manager</option>
+                <option value="eng-ops">Engineering Operations</option>
+                <option value="pmo">PMO Leader</option>
+                <option value="engineer">Engineer / Tech Lead</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ea-users">Team Size</label>
+              <select id="ea-users" name="users">
+                <option value="">Select range</option>
+                <option value="1-10">1–10 users</option>
+                <option value="11-50">11–50 users</option>
+                <option value="51-200">51–200 users</option>
+                <option value="201-500">201–500 users</option>
+                <option value="500+">500+ users</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ea-message">Tell us about your use case (optional)</label>
+            <textarea id="ea-message" name="message" rows="3" placeholder="Briefly describe how your teams report engineering effort today and what you'd like TickPax to help you understand..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg">
+            Request Early Access
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-disclaimer">We will respond within 2 business days. No spam — ever.</p>
+          <div class="form-success" id="form-success" aria-live="polite" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <strong>Application received!</strong>
+              <p>Thank you — we will be in touch within 2 business days.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FINAL CTA
+    ============================================================ -->
+    <section class="final-cta section" id="final-cta" aria-labelledby="final-cta-title">
+      <div class="container final-cta-inner">
+        <h2 id="final-cta-title" class="section-headline">Stop guessing where <span class="gradient-text">engineering effort goes.</span></h2>
+        <p>Transform engineering activity into trusted intelligence — with AI that recovers effort, explains itself, and keeps humans in control.</p>
+        <div class="final-cta-actions">
+          <a href="#pricing" class="btn btn-primary btn-lg">Start Free Trial</a>
+          <a href="#early-access" class="btn btn-outline btn-lg">Request Demo</a>
+        </div>
+        <p class="final-disclaimer">One-click install · Human-controlled AI · Free up to 5 users</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" aria-label="TickPax home">
+          <img src="assets/icon.png" alt="" class="logo-mark" width="32" height="32" />
+          <span class="logo-text">TickPax</span>
+        </a>
+        <p>AI Engineering Effort Intelligence<br />for Engineering Teams</p>
+        <a href="#marketplace" class="footer-marketplace-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
+          Available as a one-click extension
+        </a>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-group">
+          <h4>Product</h4>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#why">Why TickPax</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#marketplace">Install</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Solutions</h4>
+          <a href="#fit">Software Consultancies</a>
+          <a href="#fit">Delivery &amp; DevOps Partners</a>
+          <a href="#fit">Enterprise Engineering</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Company</h4>
+          <a href="#early-access">Early Access</a>
+          <a href="#early-access">Contact Sales</a>
+          <a href="#early-access">Request Demo</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="footer-year"></span> TickPax. AI Engineering Effort Intelligence for Engineering Teams.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
