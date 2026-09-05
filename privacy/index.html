@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — TickPax</title>
+  <meta name="description" content="What personal data TickPax handles, why, and what rights people have." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a1628" />
+
+  <link rel="canonical" href="https://tickpax.com/privacy" />
+
+  <meta property="og:site_name" content="TickPax" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tickpax.com/privacy" />
+  <meta property="og:title" content="Privacy Policy — TickPax" />
+  <meta property="og:description" content="What personal data TickPax handles, why, and what rights people have." />
+  <meta property="og:image" content="https://tickpax.com/assets/og-image.png" />
+
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/legal.css" />
+</head>
+<body class="legal-body">
+  <header class="legal-header">
+    <a href="/" class="legal-logo" aria-label="TickPax home">
+      <img src="/assets/icon.png" alt="" width="28" height="28" />
+      <span>TickPax</span>
+    </a>
+    <nav class="legal-nav" aria-label="Legal documents">
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/dpa">DPA</a>
+      <a href="/support">Support</a>
+    </nav>
+  </header>
+
+  <main class="legal-main">
+<h1>TickPax — Privacy Policy</h1>
+<p><strong>Effective date:</strong> 26 September 2026 <strong>Controller for this policy:</strong> TickPax (https://tickpax.com) <strong>Contact:</strong> <a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a></p>
+<p>This policy explains what personal data TickPax handles, why, and what rights people have.</p>
+<hr />
+<h2>1. Two different roles, and why the difference matters</h2>
+<p>TickPax handles personal data in two distinct capacities. Which one applies determines who you should contact about your data.</p>
+<p><strong>As a processor — engineering activity data.</strong> When a company installs TickPax into its Azure DevOps organization, that company decides what is collected and why. It is the <strong>controller</strong>; we act as a <strong>processor</strong> on its instructions, under the <a href="DATA-PROCESSING-ADDENDUM.md">Data Processing Addendum</a>. This covers everything TickPax reads from Azure DevOps about a company's engineers.</p>
+<blockquote><strong>If you are an engineer whose activity TickPax processes</strong>, your employer — not TickPax — decides that TickPax is used and is your first point of contact for access, correction or deletion. We will support them in answering you, and you may also contact us at <a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a>.</blockquote>
+<p><strong>As a controller — our own business data.</strong> For website visitors, people who contact us, and the administrators who manage a TickPax account, we decide the purposes ourselves and act as <strong>controller</strong>. Sections 3 to 9 describe that role.</p>
+<hr />
+<h2>2. What TickPax reads from Azure DevOps (processor role)</h2>
+<p>The complete list. Nothing outside it is retrieved.</p>
+<p><strong>Read:</strong></p>
+<div class="table-scroll"><table>
+<thead><tr><th>Category</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td>Identity</td><td>Display name, email address, Azure DevOps user ID, and Azure AD object ID of Authorized Users and of activity authors</td></tr>
+<tr><td>Commit activity</td><td>Commit ID, author, committer, timestamps, push time. <strong>Commit message text is read in transit only</strong> — work item references such as <code>#123</code> are extracted from it, and the text itself is discarded before anything is written to our database</td></tr>
+<tr><td>Code change shape</td><td>Paths of changed files and change type (add / edit / delete) — <strong>never file contents</strong></td></tr>
+<tr><td>Pull requests</td><td>ID, title, author, reviewers, timestamps. <strong>Review comment text is read in transit only</strong> — how many comments there were and when is counted, the text itself is discarded and never stored</td></tr>
+<tr><td>Work items</td><td>ID, type, state, assignee, iteration and area path, <strong>title</strong>, state-transition history. <strong>Description, acceptance criteria, repro steps and comment text are read in transit only</strong> — their length is counted as a measure of authored volume, and the text itself is never stored</td></tr>
+<tr><td>Organization structure</td><td>Project list, repository list, and the organization's user list via the Azure DevOps Member Entitlement API</td></tr>
+<tr><td>Generated in TickPax</td><td>Time logs, categories, AI proposals, approvals, settings, and an audit trail of user-management actions</td></tr>
+</tbody></table></div>
+<p><strong>Never read:</strong> source code or file contents; line-level diffs; build, release or pipeline data; wikis, test plans or dashboards; anything in Microsoft 365 — TickPax requests no Microsoft Graph permission and holds no access to mail, files or the directory.</p>
+<p><strong>Text your engineers write is not retained.</strong> Commit messages, pull request review comments, work item comments, descriptions, acceptance criteria and repro steps are stripped at the moment a webhook is received — before the payload reaches our database — and are not sent to the AI provider on any path. What survives is countable: how many commits and comments there were, when they happened, how many files changed, how much text was authored, and any work item number that text referenced. Work item <strong>titles</strong> are the single exception: those are retained, because the Service displays them back to you on proposals, time logs and reports.</p>
+<p>Personal data is unavoidable here: the entire product works by attributing activity to the individual who performed it.</p>
+<hr />
+<h2>3. What we collect as controller</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>Category</th><th>Data</th><th>Why</th><th>Lawful basis</th></tr></thead>
+<tbody>
+<tr><td>Account</td><td>Name, email, Azure DevOps organization name, role</td><td>Provide the Service, authenticate administrators</td><td>Contract</td></tr>
+<tr><td>Billing</td><td>Company name, billing contact, subscription and seat records, invoice references</td><td>Take payment, meet accounting duties. <strong>Card details are handled by Dodo Payments and never reach us</strong></td><td>Contract; legal obligation</td></tr>
+<tr><td>Support</td><td>Correspondence you send us</td><td>Answer you and improve the product</td><td>Legitimate interests</td></tr>
+<tr><td>Security &amp; operational logs</td><td>IP address, timestamps, request paths, error diagnostics</td><td>Keep the Service secure and working; investigate abuse</td><td>Legitimate interests</td></tr>
+<tr><td>Website</td><td>See §7</td><td></td><td></td></tr>
+</tbody></table></div>
+<hr />
+<h2>4. AI processing</h2>
+<p>Proposals are generated using <strong>Google Gemini</strong>, accessed over an API from our servers.</p>
+<p><strong>What is sent depends on the path:</strong></p>
+<div class="table-scroll"><table>
+<thead><tr><th>Path</th><th>Sent to the model</th></tr></thead>
+<tbody>
+<tr><td>Primary work item estimation</td><td><strong>Masked.</strong> Work item title is replaced with the literal token <code>TASK-TITLE</code>, description with <code>TASK-DESCRIPTION</code>, every comment body with <code>COMMENT-1</code>, <code>COMMENT-2</code>, …, and every user identity with <code>USER-1</code>, <code>USER-2</code>, …. Only timings, state transitions, event counts and file counts are sent as-is</td></tr>
+<tr><td>Activity cluster estimation</td><td>Metadata only — durations, event counts, role signals, and structural event summaries (event type, timestamp, work item id, activity kind, a coarse content-volume bucket). No authored text</td></tr>
+<tr><td>Fallback estimation, used when work item details cannot be retrieved</td><td>Timings, event counts and file counts only. No text</td></tr>
+<tr><td>Untracked work matching</td><td><strong>Nothing is sent — no model is used.</strong> An untracked commit or pull request is matched to a work item using only the reference its author wrote: a <code>#249</code> recovered from the commit message at ingestion, or the number in the branch name. That matching runs on our own servers</td></tr>
+</tbody></table></div>
+<p><strong>No text written by your engineers is sent to the model on any path</strong> — not commit messages, review comments, work item comments, titles or descriptions. What the model receives is timings, counts, file counts, work item state values, and opaque tokens in place of anything authored.</p>
+<p><strong>Your data is not used to train AI models.</strong> Content sent to Google Gemini is used solely to generate that customer's Proposals. No source code is ever sent, because TickPax never retrieves it.</p>
+<p><strong>No solely automated decisions.</strong> A Proposal has no effect until a person reviews and approves it. TickPax does not make automated decisions producing legal or similarly significant effects, within the meaning of Article 22 GDPR.</p>
+<hr />
+<h2>5. Where your data is held</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>Purpose</th><th>Provider</th><th>Location</th></tr></thead>
+<tbody>
+<tr><td>Application and database hosting</td><td>Hetzner Online GmbH</td><td>Falkenstein, <strong>Germany</strong></td></tr>
+<tr><td>Backups</td><td>Hetzner Storage Box</td><td><strong>Germany</strong></td></tr>
+<tr><td>Secrets management</td><td>Microsoft Azure Key Vault</td><td><strong>West Europe</strong></td></tr>
+<tr><td>AI inference</td><td>Google (Gemini API)</td><td>May be processed outside the EEA</td></tr>
+<tr><td>Payments</td><td>Dodo Payments</td><td>Merchant of Record; see their privacy notice</td></tr>
+</tbody></table></div>
+<p>Customer Data is stored in the <strong>European Union</strong>. The only routine transfer outside the EEA is to Google for AI inference, made under the European Commission's <strong>Standard Contractual Clauses</strong> together with a decisive technical measure: <strong>no free text written by your people is transferred on any path.</strong> Titles, descriptions, comment bodies and user identities are replaced with opaque tokens before the request leaves our servers, and commit messages and review comments were already discarded at the point of receipt.</p>
+<hr />
+<h2>6. How long we keep data</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>Data</th><th>Retention</th></tr></thead>
+<tbody>
+<tr><td>Commit message, review comment and work item comment text</td><td><strong>Never stored.</strong> Removed at the point of receipt, before the payload is written to our database</td></tr>
+<tr><td>Raw Azure DevOps webhook payloads (metadata that remains after the above)</td><td><strong>7 days</strong>, then purged</td></tr>
+<tr><td>Time logs, proposals, categories, settings</td><td>For the life of the account</td></tr>
+<tr><td>Records marked deleted in the app</td><td>Soft-deleted immediately (hidden from all access), purged on our deletion cycle</td></tr>
+<tr><td>Customer Data after account termination</td><td>Deleted or anonymised within <strong>90 days</strong>, except where law requires retention</td></tr>
+<tr><td>Billing and invoice records</td><td>As required by tax and accounting law</td></tr>
+<tr><td>Security logs</td><td>Up to 12 months</td></tr>
+</tbody></table></div>
+<p>Backups age out on their own cycle after deletion.</p>
+<hr />
+<h2>7. Website</h2>
+<p>The TickPax marketing site is deliberately light. It sets no advertising cookies and runs no third-party ad trackers. Where we use analytics, it is configured without cross-site tracking, and any non-essential cookie is set only with your consent, which you may withdraw at any time.</p>
+<hr />
+<h2>8. Security</h2>
+<ul><li>OAuth access and refresh tokens are <strong>encrypted at rest</strong>.</li><li>Card data never reaches our systems — Dodo Payments handles it.</li><li>Access to production systems is restricted and authenticated; secrets are held in Azure Key Vault rather than in configuration.</li><li>Every user's identity is bound to their verified Azure AD object ID, so one user cannot act as another. Requests that fail this check are rejected.</li><li>Webhook deliveries are authenticated with a shared secret before being accepted.</li><li>Data in transit is protected with TLS.</li></ul>
+<p>No system is perfectly secure. If we become aware of a personal data breach affecting Customer Data, we notify the affected customer without undue delay, as set out in the Data Processing Addendum.</p>
+<hr />
+<h2>9. Your rights</h2>
+<p>Where we act as controller, you may request access to your personal data, correction, deletion, restriction, portability, and may object to processing based on legitimate interests. Where processing rests on consent, you may withdraw it at any time.</p>
+<p>Contact <a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a>. We respond within one month. We may need to verify your identity.</p>
+<p>You may complain to your local data protection authority. Where we act as processor, please contact the company that operates the TickPax account — your employer or client — first.</p>
+<hr />
+<h2>10. Children</h2>
+<p>TickPax is a business product and is not directed at anyone under 16. We do not knowingly collect their data.</p>
+<hr />
+<h2>11. Changes</h2>
+<p>We may update this policy. Material changes will be notified by email to account administrators or by notice in the Service before they take effect. The effective date above always reflects the current version.</p>
+<hr />
+<h2>12. Contact</h2>
+<p>TickPax https://tickpax.com <a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a></p>
+  </main>
+
+  <footer class="legal-footer">
+    <p>
+      <a href="/">TickPax</a> · Questions about this document:
+      <a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a>
+    </p>
+  </footer>
+</body>
+</html>

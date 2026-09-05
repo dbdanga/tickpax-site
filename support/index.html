@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — TickPax</title>
+  <meta name="description" content="How to get help with TickPax: contact routes, what to include, and where to read the terms and privacy policy." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a1628" />
+
+  <link rel="canonical" href="https://tickpax.com/support" />
+
+  <meta property="og:site_name" content="TickPax" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tickpax.com/support" />
+  <meta property="og:title" content="Support — TickPax" />
+  <meta property="og:description" content="How to get help with TickPax." />
+  <meta property="og:image" content="https://tickpax.com/assets/og-image.png" />
+
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/legal.css" />
+</head>
+<body class="legal-body">
+  <header class="legal-header">
+    <a href="/" class="legal-logo" aria-label="TickPax home">
+      <img src="/assets/icon.png" alt="" width="28" height="28" />
+      <span>TickPax</span>
+    </a>
+    <nav class="legal-nav" aria-label="Legal documents">
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/dpa">DPA</a>
+      <a href="/support">Support</a>
+    </nav>
+  </header>
+
+  <main class="legal-main">
+    <h1>Support</h1>
+
+    <p>
+      TickPax is a small operation, and support goes straight to the people who build it.
+      There is no ticket portal and no first-line script.
+    </p>
+
+    <h2>Getting help</h2>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>What you need</th><th>Where to write</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Something is broken, a proposal looks wrong, a question about your plan or invoice</td>
+            <td><a href="mailto:contact-us@tickpax.com">contact-us@tickpax.com</a></td>
+          </tr>
+          <tr>
+            <td>Access, correction or deletion of personal data; a signed DPA; anything privacy-related</td>
+            <td><a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Privacy requests are answered within one month, as set out in the
+      <a href="/privacy">Privacy Policy</a>. Everything else we answer as quickly as we can —
+      we would rather not publish a response time we cannot keep at this stage.
+    </p>
+
+    <h2>What to include</h2>
+
+    <p>
+      For anything involving a specific estimate, these four things usually resolve it on the
+      first reply:
+    </p>
+
+    <ul>
+      <li>Your Azure DevOps organization name.</li>
+      <li>The work item id, and the date of the session in question.</li>
+      <li>What the proposal said, and what you expected instead.</li>
+      <li>Whether the proposal was pending, approved, or rejected when you noticed.</li>
+    </ul>
+
+    <p>
+      Please do not send source code or screenshots containing credentials. TickPax never reads
+      your source code, and support does not need it to diagnose an estimate.
+    </p>
+
+    <h2>Before you write</h2>
+
+    <p>
+      Two things account for most surprises, and both are working as designed:
+    </p>
+
+    <ul>
+      <li>
+        <strong>An estimate looks like a flat minimum.</strong> A session built from a single
+        commit has no interval to measure, so the figure falls back to a floor derived from how
+        much code changed. It is a limit of what Git records, not a judgement about the work.
+      </li>
+      <li>
+        <strong>Work that is not linked to a work item.</strong> TickPax matches an untracked
+        commit using the reference its author wrote — <code>#123</code> in the commit message, or
+        the number in the branch name. With neither, it will not guess.
+      </li>
+    </ul>
+
+    <h2>Documents</h2>
+
+    <ul>
+      <li><a href="/terms">Terms of Service</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+      <li><a href="/dpa">Data Processing Addendum</a> — GDPR Article 28 processor terms and the sub-processor list</li>
+    </ul>
+  </main>
+
+  <footer class="legal-footer">
+    <p>
+      <a href="/">TickPax</a> · General enquiries:
+      <a href="mailto:contact-us@tickpax.com">contact-us@tickpax.com</a>
+    </p>
+  </footer>
+</body>
+</html>

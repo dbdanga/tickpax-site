@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tickpax.com/sitemap.xml

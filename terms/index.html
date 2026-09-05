@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — TickPax</title>
+  <meta name="description" content="The commercial terms for using TickPax: plans, seats, billing, and liability." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a1628" />
+
+  <link rel="canonical" href="https://tickpax.com/terms" />
+
+  <meta property="og:site_name" content="TickPax" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tickpax.com/terms" />
+  <meta property="og:title" content="Terms of Service — TickPax" />
+  <meta property="og:description" content="The commercial terms for using TickPax: plans, seats, billing, and liability." />
+  <meta property="og:image" content="https://tickpax.com/assets/og-image.png" />
+
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/legal.css" />
+</head>
+<body class="legal-body">
+  <header class="legal-header">
+    <a href="/" class="legal-logo" aria-label="TickPax home">
+      <img src="/assets/icon.png" alt="" width="28" height="28" />
+      <span>TickPax</span>
+    </a>
+    <nav class="legal-nav" aria-label="Legal documents">
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/dpa">DPA</a>
+      <a href="/support">Support</a>
+    </nav>
+  </header>
+
+  <main class="legal-main">
+<h1>TickPax — Terms of Service</h1>
+<p><strong>Effective date:</strong> 26 September 2026 <strong>Provider:</strong> TickPax, https://tickpax.com ("TickPax", "we", "us")</p>
+<p>These Terms govern your use of the TickPax Azure DevOps extension and the TickPax hosted service. By installing the extension, registering an organization, or using the service, you agree to these Terms. If you are agreeing on behalf of a company, you confirm you have authority to bind it.</p>
+<p><strong>TickPax is provided for business use only.</strong> It is not offered to consumers, and you may not use it for personal, family or household purposes.</p>
+<hr />
+<h2>1. Definitions</h2>
+<ul><li><strong>Service</strong> — the TickPax extension published to the Azure DevOps Marketplace, the TickPax web interface, and the hosted backend at <code>api.tickpax.com</code>.</li><li><strong>Customer</strong> — the organization that registers an Azure DevOps organization with TickPax.</li><li><strong>Authorized User</strong> — an individual approved by a Customer administrator to use the Service under the Customer's account.</li><li><strong>Connecting Account</strong> — the Azure DevOps account whose OAuth authorization TickPax uses to read the Customer's Azure DevOps data.</li><li><strong>Customer Data</strong> — data TickPax retrieves from the Customer's Azure DevOps organization, together with time logs, categories, approvals and settings created in the Service.</li><li><strong>Proposal</strong> — an AI-generated estimate of time spent, produced by the Service for review by an Authorized User.</li></ul>
+<hr />
+<h2>2. The Service</h2>
+<p>TickPax reads engineering activity from your Azure DevOps organization — commit metadata, changed file paths, pull request metadata, and work item fields and state history — and uses it to generate Proposals: suggested time entries with an explanation of the evidence behind them.</p>
+<p><strong>TickPax does not retain the text your people write.</strong> Commit messages, pull request review comments and work item comments are read in transit and discarded before storage: what is kept is how many there were, when, and any work item number they referenced. Work item titles and descriptions are retained, because the Service displays them back to you. The Privacy Policy sets this out in full.</p>
+<p><strong>TickPax never reads your source code.</strong> The Service makes no call to Azure DevOps item, blob or diff-content endpoints, and retrieves no file contents and no line-level diffs. It reads no build, release or pipeline data.</p>
+<p>The Service's only write to your Azure DevOps organization is setting a time value on a work item after an Authorized User approves a Proposal, and creating the service hook subscriptions needed to receive activity events.</p>
+<h3>2.1 Early access</h3>
+<p>The Service is currently offered as a private, early-access product. During early access:</p>
+<ul><li>Features may change, be added, or be withdrawn without notice.</li><li>We provide <strong>no uptime commitment and no service level agreement</strong>.</li><li>Support is provided on a commercially reasonable-efforts basis by email only.</li></ul>
+<p>We will give you reasonable notice before withdrawing a feature you actively rely on, and before ending early access on terms less favourable than those you signed up under.</p>
+<hr />
+<h2>3. Accounts, installation and roles</h2>
+<p>Installing the extension into an Azure DevOps organization requires Project Collection Administrator rights, and registering an organization with TickPax requires the same. The individual who completes registration becomes the first TickPax administrator for that organization and may approve or remove other users.</p>
+<p>You are responsible for:</p>
+<ul><li>ensuring the person who installs and connects TickPax is authorized by your organization to do so;</li><li>the security of the Connecting Account, and for keeping its Azure DevOps permissions appropriate;</li><li>all activity that occurs under your Authorized Users' accounts.</li></ul>
+<p>TickPax's access to your Azure DevOps data is bounded by the permissions of the Connecting Account. If you reduce those permissions, the Service's visibility reduces accordingly.</p>
+<hr />
+<h2>4. Your responsibilities</h2>
+<h3>4.1 Lawful use</h3>
+<p>You will use the Service in compliance with applicable law and will not use it to violate the rights of any person.</p>
+<h3>4.2 Accuracy of records</h3>
+<p>Proposals are <strong>estimates</strong>. You are responsible for reviewing them before approval and for the accuracy of any time record you approve, export, invoice against, or rely on.</p>
+<h3>4.3 Employee monitoring — read this clause carefully</h3>
+<p>The Service derives time estimates from the recorded activity of named individuals. In many jurisdictions this constitutes monitoring of employees and is subject to specific legal requirements that fall on <strong>you</strong>, not on us. You are solely responsible for:</p>
+<ul><li>establishing a lawful basis for processing your personnel's data under applicable data protection law;</li><li>informing your personnel that TickPax is in use and what it processes;</li><li>completing any consultation, co-determination or approval process required by law or by collective agreement — including, where applicable, works council agreement (for example a *Betriebsvereinbarung* in Germany or Austria, where systems capable of monitoring employee performance generally require works council consent <strong>before</strong> deployment);</li><li>honouring your personnel's rights in respect of their personal data, with our assistance as set out in the Data Processing Addendum.</li></ul>
+<p>We do not assess whether your deployment is lawful in your jurisdiction, and installing the Service is not advice that it is.</p>
+<h3>4.4 Prohibited use</h3>
+<p>You will not, and will not permit anyone to:</p>
+<ul><li>use the Service to build a competing product, or to benchmark it for publication without our written consent;</li><li>reverse engineer, decompile or attempt to extract the Service's prompts, models or estimation logic, except to the extent that restriction is unenforceable by law;</li><li>circumvent plan limits, seat counts or access controls, including by sharing a seat between individuals;</li><li>submit data to the Service that you have no right to submit;</li><li>interfere with the Service's operation, probe its security without written authorization, or use it to transmit malicious code.</li></ul>
+<hr />
+<h2>5. Plans, seats and fees</h2>
+<h3>5.1 Plans</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>Plan</th><th>Price</th><th>Active users</th><th>AI proposals / user / month</th><th>Time logs / user / month</th></tr></thead>
+<tbody>
+<tr><td>Free</td><td>USD 0</td><td>Up to 5</td><td>18</td><td>30</td></tr>
+<tr><td>Basic</td><td>USD 8 per seat / month</td><td>Unlimited</td><td>95</td><td>250</td></tr>
+<tr><td>Pro</td><td>USD 13 per seat / month</td><td>Unlimited</td><td>300</td><td>Unlimited</td></tr>
+</tbody></table></div>
+<p>A <strong>seat</strong> is required for each Authorized User in an active state. Seat count is set by the Customer and may be increased at any time; increases are charged from the date of the change. Plan limits are enforced by the Service, and requests beyond a limit are refused until the next monthly period or until you upgrade.</p>
+<p>We may change prices, plan limits and plan composition. For an existing paid subscription, a price increase takes effect at the start of your next billing term, and we will give you at least 30 days' notice before that term begins. You may cancel before the increase takes effect.</p>
+<h3>5.2 Billing and payment</h3>
+<p>Paid subscriptions are billed in advance, monthly or annually according to the billing cycle you select.</p>
+<p>Payments are processed by <strong>Dodo Payments</strong>, which acts as <strong>Merchant of Record</strong> for your purchase. This means Dodo Payments is the seller of record, issues your invoice, and is responsible for collecting and remitting applicable sales tax, VAT or GST. Your purchase is additionally subject to Dodo Payments' own terms, and payment card details are handled by Dodo Payments — TickPax never receives or stores them.</p>
+<p>Prices are exclusive of taxes unless stated otherwise at checkout.</p>
+<h3>5.3 Non-payment</h3>
+<p>If a payment fails or is not received, we may suspend the Customer's access to paid features. Suspension moves the subscription to a suspended state; Customer Data is retained during suspension and access is restored on payment.</p>
+<h3>5.4 Cancellation and refunds</h3>
+<p>You may cancel at any time from <strong>Organization settings → TickPax</strong>. Cancellation is <strong>scheduled for the end of your current paid period</strong>: you keep full access until that date, after which the organization moves to the Free plan and its limits.</p>
+<p><strong>Fees are non-refundable.</strong> We do not provide refunds or credits for partial billing periods, unused seats, or periods in which you did not use the Service. This does not affect rights you have under mandatory law that cannot be waived.</p>
+<hr />
+<h2>6. AI-generated Proposals — limitations and reliance</h2>
+<p>This section is important, and we would rather state it plainly than bury it.</p>
+<p><strong>Proposals are estimates produced by a statistical model. They are not a record of hours actually worked.</strong></p>
+<ul><li>Estimates are inferred from activity signals — commit timing and volume, review activity, work item transitions. Those signals are an imperfect proxy for effort. Work performed away from Azure DevOps is invisible to the Service and will be under-estimated or missed entirely.</li><li>Accuracy varies by team, by working style, and by how consistently your organization links commits and pull requests to work items.</li><li>Every Proposal requires human review and approval before it becomes a time record. <strong>The Service does not create billable or payroll records on its own.</strong></li></ul>
+<p>You must not rely on a Proposal as the sole basis for: invoicing a client, calculating payroll or overtime, substantiating a grant, tax or R&amp;D credit claim, demonstrating compliance with working time law, or taking employment action against an individual. Where a Proposal informs any of these, an appropriate person in your organization must review and take responsibility for the underlying record.</p>
+<p>We make no warranty as to the accuracy of any Proposal, and we are not liable for decisions taken on the basis of one. Nothing in this section limits liability that cannot be limited by law.</p>
+<hr />
+<h2>7. Customer Data and intellectual property</h2>
+<p><strong>You own your Customer Data.</strong> We claim no ownership over it.</p>
+<p>You grant us a non-exclusive, worldwide licence to host, process, transmit and display Customer Data solely to provide, secure and support the Service. This licence exists only to run the Service and ends when the data is deleted.</p>
+<p><strong>We do not use your Customer Data to train AI models.</strong> Data sent to our AI provider is used only to generate your Proposals. See the Privacy Policy and the Data Processing Addendum for detail.</p>
+<p><strong>We own the Service</strong>, including the extension, the backend, the estimation logic, the prompts and all improvements to them. These Terms grant you a limited, non-exclusive, non-transferable right to use the Service during your subscription, and nothing more.</p>
+<p><strong>Feedback.</strong> If you send us suggestions or feedback, we may use them without restriction or obligation to you. We will not identify you as the source without your permission.</p>
+<hr />
+<h2>8. Confidentiality</h2>
+<p>Each party may receive information the other treats as confidential. Each party will protect the other's confidential information with at least reasonable care, use it only to perform under these Terms, and not disclose it except to personnel and contractors bound by comparable obligations. This does not apply to information that is public through no fault of the recipient, independently developed, or lawfully received from a third party, and does not prevent disclosure required by law where the recipient gives prompt notice if legally permitted.</p>
+<hr />
+<h2>9. Third-party services</h2>
+<p>The Service depends on <strong>Microsoft Azure DevOps</strong>, <strong>Google Gemini</strong> and <strong>Dodo Payments</strong>. Your use of Azure DevOps is governed by your agreement with Microsoft. We are not responsible for those services' availability, changes, security or acts, and an outage or breaking change in any of them may interrupt the Service. Sub-processors are listed in the Data Processing Addendum.</p>
+<hr />
+<h2>10. Availability and support</h2>
+<p>We aim to keep the Service available and to respond to support requests promptly, but during early access we commit to <strong>no specific uptime or response time</strong>. We may perform maintenance, and will try to schedule disruptive maintenance outside European business hours where practical.</p>
+<hr />
+<h2>11. Disclaimer of warranties</h2>
+<p>To the fullest extent permitted by law, the Service is provided <strong>"as is" and "as available"</strong>, without warranties of any kind, whether express, implied or statutory, including implied warranties of merchantability, fitness for a particular purpose, non-infringement, accuracy, or uninterrupted or error-free operation.</p>
+<p>We do not warrant that Proposals will be accurate, that the Service will detect all relevant activity, or that it will meet any regulatory or audit standard applicable to you.</p>
+<hr />
+<h2>12. Limitation of liability</h2>
+<p>To the fullest extent permitted by law:</p>
+<p><strong>(a)</strong> Neither party is liable for indirect, incidental, special, consequential or punitive damages, or for lost profits, lost revenue, lost business, lost goodwill, or the cost of substitute services, even if advised of the possibility.</p>
+<p><strong>(b)</strong> Our total aggregate liability arising out of or relating to these Terms or the Service is limited to the <strong>greater of</strong> (i) the total fees you paid us in the twelve months immediately before the event giving rise to the claim, or (ii) USD 100.</p>
+<p><strong>(c)</strong> Because the Free plan is provided at no charge, our aggregate liability to a Customer using only the Free plan is limited to USD 100.</p>
+<p><strong>(d)</strong> These limits do not apply to: a party's liability for death or personal injury caused by negligence; fraud or fraudulent misrepresentation; your obligation to pay fees due; either party's breach of confidentiality; or any liability that cannot be limited or excluded under applicable law.</p>
+<p><strong>(e)</strong> Each party's liability is reduced to the extent the loss was caused by the other party's failure to take reasonable mitigating steps.</p>
+<hr />
+<h2>13. Indemnity</h2>
+<p>You will defend and indemnify us against third-party claims, and resulting damages and reasonable legal costs, arising from: (a) your use of the Service in breach of these Terms or of law; (b) Customer Data you caused the Service to process without a lawful basis or without the rights to do so; or (c) your failure to meet the employee-monitoring obligations in §4.3.</p>
+<p>We will notify you promptly of any such claim, give you control of the defence, and cooperate at your expense. You may not settle a claim in a way that imposes obligations on us without our consent.</p>
+<hr />
+<h2>14. Term, termination and what happens to your data</h2>
+<p>These Terms apply for as long as you use the Service.</p>
+<p><strong>You</strong> may stop using the Service at any time, cancel under §5.4, and uninstall the extension.</p>
+<p><strong>We</strong> may suspend or terminate your access if you materially breach these Terms and do not cure the breach within 15 days of written notice, or immediately where your use poses a security risk, is unlawful, or where required by law. We may discontinue the Service entirely on 60 days' notice; if we do, we will refund any prepaid fees covering the period after discontinuation.</p>
+<p><strong>On termination:</strong></p>
+<ul><li>Access to the Service ends.</li><li>You may export your time log data before termination takes effect, and we will assist with a reasonable export request made within 30 days after termination.</li><li>We delete or anonymise Customer Data within <strong>90 days</strong> of termination, except where retention is required by law. Backups age out on their normal cycle.</li><li>Revoking TickPax's access in Azure DevOps or Entra ID stops all further data collection immediately. Service hook subscriptions we created remain in your Azure DevOps organization until you or we remove them.</li></ul>
+<p>Sections 7 (as to ownership), 8, 11, 12, 13 and 16 survive termination.</p>
+<hr />
+<h2>15. Changes to these Terms</h2>
+<p>We may update these Terms. For material changes affecting a paid subscription we will give at least 30 days' notice by email to the Customer's administrators or by notice in the Service, and the change takes effect at the start of your next billing term. Continuing to use the Service after that date means you accept the updated Terms. If you do not accept them, cancel before they take effect.</p>
+<hr />
+<h2>16. Disputes</h2>
+<p>Nothing in this section deprives a customer of the protection of mandatory provisions of the law of the country in which it is established, where such protection cannot be derogated from by agreement.</p>
+<p>Before filing a claim, the parties will attempt in good faith to resolve the dispute by discussion for 30 days after written notice.</p>
+<hr />
+<h2>17. General</h2>
+<ul><li><strong>Entire agreement.</strong> These Terms, the Privacy Policy and the Data Processing Addendum are the entire agreement between us on this subject and supersede prior discussions. Where they conflict, the Data Processing Addendum prevails on data protection matters.</li><li><strong>Assignment.</strong> You may not assign these Terms without our written consent, except to a successor of your business. We may assign to an affiliate or in connection with a merger, acquisition or sale of assets.</li><li><strong>Severability.</strong> If a provision is unenforceable, it is modified to the minimum extent necessary and the rest remains in force.</li><li><strong>No waiver.</strong> Failure to enforce a provision is not a waiver of it.</li><li><strong>Force majeure.</strong> Neither party is liable for delay or failure caused by events beyond its reasonable control.</li><li><strong>Notices.</strong> To us: <a href="mailto:contact-us@tickpax.com">contact-us@tickpax.com</a>. To you: the email addresses of your TickPax administrators, or notice within the Service.</li><li><strong>No partnership.</strong> Nothing here creates a partnership, agency or employment relationship.</li></ul>
+<hr />
+<h2>18. Contact</h2>
+<p>TickPax https://tickpax.com <a href="mailto:contact-us@tickpax.com">contact-us@tickpax.com</a></p>
+  </main>
+
+  <footer class="legal-footer">
+    <p>
+      <a href="/">TickPax</a> · Questions about this document:
+      <a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a>
+    </p>
+  </footer>
+</body>
+</html>

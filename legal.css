@@ -1,0 +1,208 @@
+/* ============================================================
+   Legal document pages — /privacy, /terms, /dpa, /support
+
+   Long-form reading, on the same navy palette as the marketing
+   site. Deliberately plain: these pages are read under scrutiny
+   by procurement and counsel, not skimmed.
+   ============================================================ */
+
+:root {
+  --lg-bg: #060d1a;
+  --lg-surface: #0a1628;
+  --lg-surface-raised: #0f2044;
+  --lg-text: #e8edf4;
+  --lg-text-muted: #9fb0c7;
+  --lg-accent: #0078d4;
+  --lg-border: rgba(232, 237, 244, 0.14);
+  --lg-measure: 46rem;
+}
+
+.legal-body {
+  margin: 0;
+  background: var(--lg-bg);
+  color: var(--lg-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+
+.legal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  max-width: var(--lg-measure);
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--lg-border);
+}
+
+.legal-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--lg-text);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.legal-nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.legal-nav a {
+  color: var(--lg-text-muted);
+  text-decoration: none;
+}
+
+.legal-nav a:hover {
+  color: var(--lg-text);
+}
+
+/* ── Document body ────────────────────────────────────────── */
+
+.legal-main {
+  max-width: var(--lg-measure);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.legal-main h1 {
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+}
+
+.legal-main h2 {
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  margin: 3rem 0 1rem;
+  padding-top: 0.5rem;
+}
+
+.legal-main h3 {
+  font-size: 1.08rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.legal-main h4 {
+  font-size: 1rem;
+  color: var(--lg-text-muted);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.legal-main p {
+  margin: 0 0 1.1rem;
+}
+
+.legal-main ul,
+.legal-main ol {
+  margin: 0 0 1.2rem;
+  padding-left: 1.35rem;
+}
+
+.legal-main li {
+  margin-bottom: 0.55rem;
+}
+
+.legal-main a {
+  color: var(--lg-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-main strong {
+  color: #fff;
+  font-weight: 650;
+}
+
+.legal-main code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.87em;
+  background: var(--lg-surface-raised);
+  border: 1px solid var(--lg-border);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  overflow-wrap: anywhere;
+}
+
+.legal-main hr {
+  border: 0;
+  border-top: 1px solid var(--lg-border);
+  margin: 2.5rem 0;
+}
+
+.legal-main blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--lg-surface);
+  border-left: 3px solid var(--lg-accent);
+  color: var(--lg-text-muted);
+}
+
+/* Wide tables scroll inside their own box rather than the page. */
+.table-scroll {
+  overflow-x: auto;
+  margin: 0 0 1.6rem;
+  border: 1px solid var(--lg-border);
+  background: var(--lg-surface);
+}
+
+.legal-main table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 32rem;
+  font-size: 0.93rem;
+}
+
+.legal-main th,
+.legal-main td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--lg-border);
+}
+
+.legal-main th {
+  background: var(--lg-surface-raised);
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.legal-main tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+
+.legal-footer {
+  max-width: var(--lg-measure);
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+  border-top: 1px solid var(--lg-border);
+  color: var(--lg-text-muted);
+  font-size: 0.9rem;
+}
+
+.legal-footer a {
+  color: var(--lg-text-muted);
+}
+
+@media (max-width: 40rem) {
+  .legal-header {
+    padding-top: 1.25rem;
+  }
+
+  .legal-nav {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+}

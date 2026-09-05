@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Processing Addendum — TickPax</title>
+  <meta name="description" content="GDPR Article 28 processor terms and the sub-processor list for TickPax." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a1628" />
+
+  <link rel="canonical" href="https://tickpax.com/dpa" />
+
+  <meta property="og:site_name" content="TickPax" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tickpax.com/dpa" />
+  <meta property="og:title" content="Data Processing Addendum — TickPax" />
+  <meta property="og:description" content="GDPR Article 28 processor terms and the sub-processor list for TickPax." />
+  <meta property="og:image" content="https://tickpax.com/assets/og-image.png" />
+
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/legal.css" />
+</head>
+<body class="legal-body">
+  <header class="legal-header">
+    <a href="/" class="legal-logo" aria-label="TickPax home">
+      <img src="/assets/icon.png" alt="" width="28" height="28" />
+      <span>TickPax</span>
+    </a>
+    <nav class="legal-nav" aria-label="Legal documents">
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/dpa">DPA</a>
+      <a href="/support">Support</a>
+    </nav>
+  </header>
+
+  <main class="legal-main">
+<h1>TickPax — Data Processing Addendum</h1>
+<p><strong>Effective date:</strong> 26 September 2026</p>
+<p>This Data Processing Addendum ("DPA") forms part of the <a href="TERMS-OF-SERVICE.md">Terms of Service</a> between TickPax ("Processor", "we") and the customer that registers an Azure DevOps organization with TickPax ("Controller", "you"). It applies where we process personal data on your behalf under the EU General Data Protection Regulation (GDPR), the UK GDPR, or comparable law.</p>
+<p>It is accepted automatically when you accept the Terms of Service. If your procurement process requires a signed copy, contact <a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a>.</p>
+<p>Where this DPA conflicts with the Terms of Service on data protection, <strong>this DPA prevails</strong>.</p>
+<hr />
+<h2>1. Roles</h2>
+<p>You are the <strong>controller</strong> and we are the <strong>processor</strong> in respect of the personal data TickPax processes from your Azure DevOps organization.</p>
+<p>You determine that TickPax is deployed, which projects it tracks, which people are Authorized Users, and for what purpose the resulting records are used. We process only to provide the Service.</p>
+<hr />
+<h2>2. Subject matter, duration, nature and purpose</h2>
+<div class="table-scroll"><table>
+<thead><tr><th></th><th></th></tr></thead>
+<tbody>
+<tr><td><strong>Subject matter</strong></td><td>Provision of the TickPax AI time-tracking service</td></tr>
+<tr><td><strong>Duration</strong></td><td>The term of your subscription, plus the deletion period in §10</td></tr>
+<tr><td><strong>Nature and purpose</strong></td><td>Collecting engineering activity from Azure DevOps; generating AI time estimates; storing time records approved by your people; writing approved time values back to Azure DevOps work items</td></tr>
+<tr><td><strong>Type of personal data</strong></td><td>See §3</td></tr>
+<tr><td><strong>Categories of data subject</strong></td><td>Your personnel and contractors who use Azure DevOps in your organization — engineers, reviewers, work item authors and assignees — and your TickPax administrators</td></tr>
+<tr><td><strong>Special category data</strong></td><td><strong>None is requested or required.</strong> TickPax does not solicit special category data. Free-text fields could contain such data if your people write it there. Commit messages, pull request review comments, work item comments, descriptions, acceptance criteria and repro steps are discarded at the point of receipt and never stored; work item titles are retained. None of it is ever sent to the AI provider. You control what your people write</td></tr>
+</tbody></table></div>
+<hr />
+<h2>3. Personal data processed</h2>
+<p><strong>Processed:</strong></p>
+<ul><li><strong>Identifiers</strong> — display name, email address, Azure DevOps user ID, Azure AD object ID</li><li><strong>Activity metadata</strong> — commit IDs, authorship, timestamps, push times; pull request IDs, authors, reviewers, timestamps; work item IDs, types, states, assignees, iterations, area paths; state-transition history</li><li><strong>Changed file paths</strong> and change type — never file contents</li><li><strong>Free text retained</strong> — work item titles only, because the Service displays them back to you</li><li><strong>Free text read but not retained</strong> — commit messages, pull request review comments, work item comments, descriptions, acceptance criteria and repro steps. Read in transit to measure how much was written and to extract work item references, then discarded before storage. Not sent to the AI provider on any path</li><li><strong>Records created in the Service</strong> — time logs, categories, AI proposals, approvals, settings, and a user-management audit trail</li></ul>
+<p><strong>Not processed under any circumstance:</strong> source code or file contents; line-level diffs; build, release or pipeline data; wikis, test plans or dashboards; any Microsoft 365 data. TickPax requests no Microsoft Graph permission.</p>
+<hr />
+<h2>4. Your instructions</h2>
+<p>We process personal data only on your documented instructions, which comprise this DPA, the Terms of Service, and your configuration of the Service (project selection, user approvals, settings).</p>
+<p>We will tell you if, in our opinion, an instruction infringes data protection law. We may process where required by law that applies to us, and will inform you first unless that law forbids it.</p>
+<p><strong>You warrant</strong> that you have a lawful basis for the processing, that you have given the required transparency information to your personnel, and that you have completed any consultation or co-determination required — including works council agreement where the law of your jurisdiction requires it before deploying a system capable of monitoring employee performance. This obligation is yours; we do not assess it for you.</p>
+<hr />
+<h2>5. Confidentiality</h2>
+<p>We ensure that everyone authorised to process personal data under this DPA is bound by an appropriate duty of confidentiality, and we limit access to those who need it to provide or support the Service.</p>
+<hr />
+<h2>6. Security measures (Article 32)</h2>
+<p>We implement and maintain the following technical and organisational measures:</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Measure</th><th>Implementation</th></tr></thead>
+<tbody>
+<tr><td>Encryption in transit</td><td>TLS on all connections to the Service and to Azure DevOps</td></tr>
+<tr><td>Encryption of credentials at rest</td><td>OAuth access and refresh tokens are encrypted at rest with a key held outside the database</td></tr>
+<tr><td>Secrets management</td><td>Application secrets held in Azure Key Vault, not in configuration files or source control</td></tr>
+<tr><td>Identity integrity</td><td>Every request is bound to the caller's verified Azure AD object ID; requests failing this check are rejected, so one user cannot act as another</td></tr>
+<tr><td>Webhook authenticity</td><td>Inbound Azure DevOps webhooks are authenticated against a shared secret before processing</td></tr>
+<tr><td>Access control</td><td>Role separation between Admin and Member; users are inactive until an administrator approves them; production access restricted to authorised personnel</td></tr>
+<tr><td>Data minimisation</td><td>Only the fields in §3 are retrieved; source code and diffs are never fetched; AI prompts are masked as described in §8</td></tr>
+<tr><td>Storage limitation</td><td>Raw webhook payloads purged after 7 days; deletion and anonymisation per §10</td></tr>
+<tr><td>Payment data isolation</td><td>Card data is handled solely by the payment provider and never reaches our systems</td></tr>
+<tr><td>Resilience</td><td>Backups held in the same EU jurisdiction as production</td></tr>
+</tbody></table></div>
+<p>We may update these measures provided the level of security is not reduced.</p>
+<hr />
+<h2>7. Sub-processors</h2>
+<p>You give <strong>general written authorisation</strong> for the sub-processors below. We remain fully liable for their performance.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Sub-processor</th><th>Purpose</th><th>Location</th></tr></thead>
+<tbody>
+<tr><td><strong>Hetzner Online GmbH</strong></td><td>Application and database hosting; backups</td><td>Falkenstein, Germany (EU)</td></tr>
+<tr><td><strong>Google LLC / Google Ireland Ltd</strong></td><td>AI inference (Gemini API) for generating Proposals</td><td>May process outside the EEA</td></tr>
+<tr><td><strong>Microsoft (Azure Key Vault)</strong></td><td>Secrets management</td><td>West Europe (EU)</td></tr>
+<tr><td><strong>Dodo Payments</strong></td><td>Payment processing as Merchant of Record; billing personal data only, no engineering activity data</td><td>Per their terms</td></tr>
+</tbody></table></div>
+<p>We will give at least <strong>30 days' notice</strong> before adding or replacing a sub-processor, by email to your administrators or by notice in the Service. If you reasonably object on data protection grounds within that period, we will work with you in good faith to find an alternative; if none is available, you may terminate the affected subscription and receive a pro-rata refund of prepaid fees for the unused term. This refund right is an exception to the no-refund rule in the Terms of Service.</p>
+<hr />
+<h2>8. International transfers</h2>
+<p>Customer Data is stored in the <strong>European Union</strong> (Germany).</p>
+<p>The only routine transfer outside the EEA is to Google for AI inference. That transfer is made under the European Commission's <strong>Standard Contractual Clauses</strong>, supplemented by substantial technical measures applied <strong>before</strong> any request leaves our servers:</p>
+<ul><li>Commit messages, pull request review comments, work item comments, descriptions, acceptance criteria and repro steps are removed at the point of receipt. No path transfers them.</li><li>On the primary estimation path, work item titles, descriptions, comment bodies and user identities are replaced with opaque tokens (<code>TASK-TITLE</code>, <code>TASK-DESCRIPTION</code>, <code>COMMENT-1</code>, <code>USER-1</code>, …), so that path transfers no names and no free text.</li><li>Work item matching for untracked commits transfers nothing at all: it uses only the work item number the author wrote in the commit message or branch name, and runs on our own servers with no model involved.</li></ul>
+<p>The result is that <strong>no free text written by your personnel leaves the EEA on any path.</strong> What is transferred is timings, counts, file counts, work item state values, and opaque tokens.</p>
+<p><strong>Content sent to the AI provider is not used to train models.</strong></p>
+<hr />
+<h2>9. Assistance to you</h2>
+<p>We will assist you, taking into account the nature of processing and the information available to us:</p>
+<ul><li><strong>Data subject rights</strong> — where a data subject contacts us directly about data we process for you, we will refer them to you and notify you without undue delay. We will help you respond to access, correction, deletion, restriction, objection and portability requests. Administrators can already export, correct and delete time records directly in the Service.</li><li><strong>Article 32 security</strong>, and <strong>Articles 35–36</strong> data protection impact assessments and prior consultation — we will provide the information reasonably available to us.</li></ul>
+<p>Assistance is included at no charge unless a request is manifestly excessive or repetitive, in which case we may charge a reasonable fee agreed in advance.</p>
+<hr />
+<h2>10. Personal data breaches</h2>
+<p>We will notify you <strong>without undue delay, and in any event within 48 hours</strong>, after becoming aware of a personal data breach affecting personal data we process for you. The notification will describe the nature of the breach, the categories and approximate number of data subjects and records affected, the likely consequences, the measures taken or proposed, and a contact point — providing information in phases where it is not all available at once.</p>
+<p>We will not make public statements identifying you in connection with a breach without your prior consent, unless legally required.</p>
+<hr />
+<h2>11. Deletion and return</h2>
+<p>On termination of your subscription, or on your written request:</p>
+<ul><li>Access ends and collection stops immediately.</li><li>You may export your time log data before termination takes effect, and we will assist with a reasonable export request made within 30 days after termination.</li><li>We delete or anonymise the personal data within <strong>90 days</strong>, except to the extent law requires us to retain it, in which case we isolate it and keep protecting it.</li><li>Backups age out on their normal cycle.</li><li>Revoking TickPax's authorisation in Azure DevOps or Entra ID stops all further collection immediately, at any time, without contacting us.</li></ul>
+<hr />
+<h2>12. Audit</h2>
+<p>We will make available the information reasonably necessary to demonstrate compliance with Article 28, and will allow and contribute to audits, including inspections, conducted by you or an auditor you mandate.</p>
+<p>Audits are limited to once per twelve months unless a breach or a supervisory authority requires otherwise, must be requested at least 30 days in advance, must take place during business hours without unreasonable disruption, and are subject to confidentiality. Where available, we will first offer documentation, security-measure descriptions and written responses, which often satisfy the request without an on-site visit.</p>
+<hr />
+<h2>13. Liability</h2>
+<p>Each party's liability under this DPA is subject to the limitations in the Terms of Service, except where those limits are unenforceable under applicable data protection law. Nothing here limits a data subject's rights against either party under GDPR.</p>
+<hr />
+<h2>14. Term</h2>
+<p>This DPA takes effect when you accept the Terms of Service and continues while we process personal data on your behalf, plus the deletion period in §11.</p>
+<hr />
+<p><strong>Contact for data protection matters:</strong> <a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a> TickPax, https://tickpax.com</p>
+  </main>
+
+  <footer class="legal-footer">
+    <p>
+      <a href="/">TickPax</a> · Questions about this document:
+      <a href="mailto:privacy@tickpax.com">privacy@tickpax.com</a>
+    </p>
+  </footer>
+</body>
+</html>
