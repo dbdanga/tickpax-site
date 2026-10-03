@@ -1704,6 +1704,23 @@ input, select, textarea { font-family: inherit; }
   margin-bottom: 1.75rem;
 }
 
+/* Plain-text route to the listing, for anyone who would rather see the URL
+   than trust a button. Sits under the primary install CTA. */
+.marketplace-listing-link {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0.875rem 0 0;
+}
+
+.marketplace-listing-link a {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.section-light .marketplace-listing-link   { color: #3d5068; }
+.section-light .marketplace-listing-link a { color: #0a1628; }
+
 .marketplace-steps {
   display: flex;
   flex-direction: column;
