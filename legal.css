@@ -181,6 +181,170 @@
   border-bottom: 0;
 }
 
+/* ── Guide pages (/install) ───────────────────────────────── */
+
+.guide-lede {
+  font-size: 1.1rem;
+  color: var(--lg-text-muted);
+}
+
+.guide-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1px;
+  margin: 0 0 2rem;
+  background: var(--lg-border);
+  border: 1px solid var(--lg-border);
+}
+
+.guide-facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.9rem 1rem;
+  background: var(--lg-surface);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.guide-fact-label {
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lg-text-muted);
+}
+
+.guide-toc {
+  padding: 1rem 1.25rem 0.5rem;
+  background: var(--lg-surface);
+  border: 1px solid var(--lg-border);
+}
+
+.guide-toc-title {
+  font-weight: 650;
+  margin-bottom: 0.5rem !important;
+}
+
+.guide-toc ol {
+  columns: 2 16rem;
+  column-gap: 2rem;
+  font-size: 0.93rem;
+}
+
+.guide-toc li {
+  break-inside: avoid;
+  margin-bottom: 0.35rem;
+}
+
+.guide-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin-right: 0.6rem;
+  background: var(--lg-accent);
+  color: #fff;
+  font-size: 1rem;
+  vertical-align: 0.1em;
+}
+
+.guide-main h2,
+.guide-main h3 {
+  scroll-margin-top: 1.5rem;
+}
+
+.guide-checklist {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+.guide-checklist li {
+  position: relative;
+  padding-left: 1.9rem;
+}
+
+.guide-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 1rem;
+  height: 1rem;
+  border: 1.5px solid var(--lg-text-muted);
+}
+
+.guide-code {
+  margin: 0 0 1.2rem;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  background: var(--lg-surface-raised);
+  border: 1px solid var(--lg-border);
+}
+
+.guide-code code {
+  background: none;
+  border: 0;
+  padding: 0;
+  overflow-wrap: normal;
+  white-space: pre;
+}
+
+/* Screenshots: full measure, flat frame, caption underneath. */
+.shot {
+  margin: 1.5rem 0 2rem;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--lg-border);
+  background: var(--lg-surface);
+}
+
+.shot a {
+  display: block;
+  cursor: zoom-in;
+}
+
+/* Small message screenshots stay near their natural size instead of stretching. */
+.shot-narrow img {
+  width: auto;
+  max-width: min(100%, 34rem);
+}
+
+.shot figcaption {
+  margin-top: 0.6rem;
+  color: var(--lg-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* A screenshot file not yet added: show a labelled slot instead of a broken image
+   (set by the img onerror handler). Optional slots disappear entirely. */
+.shot-missing img {
+  display: none;
+}
+
+.shot-missing::before {
+  content: 'Screenshot pending';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 9rem;
+  border: 1px dashed var(--lg-border);
+  background: var(--lg-surface);
+  color: var(--lg-text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.shot-optional.shot-missing {
+  display: none;
+}
+
 /* ── Footer ───────────────────────────────────────────────── */
 
 .legal-footer {

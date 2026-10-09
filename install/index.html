@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation Guide — TickPax</title>
+  <meta name="description" content="Install TickPax into your Azure DevOps organization, connect it through Microsoft Entra ID, and onboard your team — step by step, with screenshots." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a1628" />
+
+  <link rel="canonical" href="https://tickpax.com/install" />
+
+  <meta property="og:site_name" content="TickPax" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tickpax.com/install" />
+  <meta property="og:title" content="Installation Guide — TickPax" />
+  <meta property="og:description" content="Install TickPax into your Azure DevOps organization, connect it through Microsoft Entra ID, and onboard your team — step by step, with screenshots." />
+  <meta property="og:image" content="https://tickpax.com/assets/og-image.png" />
+
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/legal.css" />
+</head>
+<body class="legal-body">
+  <header class="legal-header">
+    <a href="/" class="legal-logo" aria-label="TickPax home">
+      <img src="/assets/icon.png" alt="" width="28" height="28" />
+      <span>TickPax</span>
+    </a>
+    <nav class="legal-nav" aria-label="Documents">
+      <a href="/install" aria-current="page">Install</a>
+      <a href="/support">Support</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/dpa">DPA</a>
+    </nav>
+  </header>
+
+  <main class="legal-main guide-main">
+<h1>Install and set up TickPax</h1>
+<p class="guide-lede">From the Marketplace to your team's first AI time proposals. Most organizations finish in about <strong>10 minutes</strong>.</p>
+
+<div class="guide-facts">
+  <div><span class="guide-fact-label">Who runs it</span><span>An Azure DevOps <strong>Project Collection Administrator</strong></span></div>
+  <div><span class="guide-fact-label">Sometimes needed</span><span>A Microsoft Entra administrator, for one consent click (<a href="#entra-admin">check</a>)</span></div>
+  <div><span class="guide-fact-label">Your team does</span><span>Nothing administrative: they open TickPax and sign in once</span></div>
+</div>
+
+<nav class="guide-toc" aria-label="On this page">
+  <p class="guide-toc-title">On this page</p>
+  <ol>
+    <li><a href="#before">Before you start</a></li>
+    <li><a href="#step-1">Install the extension</a></li>
+    <li><a href="#step-2">Open TickPax in Organization settings</a></li>
+    <li><a href="#step-3">Register your organization</a></li>
+    <li><a href="#step-4">Connect TickPax to Azure DevOps</a></li>
+    <li><a href="#step-5">Review your settings</a></li>
+    <li><a href="#step-6">Add your team</a></li>
+    <li><a href="#step-7">Choose a plan (optional)</a></li>
+    <li><a href="#step-8">Start using TickPax</a></li>
+    <li><a href="#entra">For your Microsoft Entra administrator</a></li>
+    <li><a href="#security">For your security review</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#revoke">Removing TickPax</a></li>
+  </ol>
+</nav>
+
+<hr />
+
+<h2 id="before">Before you start</h2>
+<p>Every item below is a real failure point during setup. Checking them first takes two minutes and saves a support thread.</p>
+<ul class="guide-checklist">
+  <li><strong>Your Azure DevOps organization is connected to Microsoft Entra ID.</strong> Check under <em>Organization settings → Microsoft Entra</em>. If that page offers to connect a directory instead of naming one, see <a href="#entra-required">why TickPax requires it</a>.</li>
+  <li><strong>You are a Project Collection Administrator.</strong> Check under <em>Organization settings → Permissions → Project Collection Administrators</em>.</li>
+  <li><strong>Your access level is Basic or higher</strong>, not Stakeholder. Check under <em>Organization settings → Users</em>. Stakeholder accounts cannot read repositories, so TickPax would see no commits or pull requests.</li>
+  <li><strong>You know whether your tenant lets users consent to apps.</strong> If it does not, book five minutes with an Entra administrator. See <a href="#entra-admin">Do you need an Entra administrator?</a></li>
+  <li><strong>Pop-ups are allowed for <code>dev.azure.com</code></strong> in your browser. The Microsoft sign-in opens in a pop-up.</li>
+  <li><strong>Outbound HTTPS to <code>api.tickpax.com</code> is allowed</strong> from your network. No inbound firewall change is needed.</li>
+</ul>
+
+<div class="table-scroll"><table>
+<thead><tr><th>Step</th><th>Who</th><th>Role required</th></tr></thead>
+<tbody>
+<tr><td>Install the extension</td><td>Azure DevOps admin</td><td>Project Collection Administrators (or <em>Manage extensions</em> permission)</td></tr>
+<tr><td>Register the organization</td><td>Same admin</td><td>Project Collection Administrators. TickPax verifies this itself</td></tr>
+<tr><td>Approve the Microsoft consent screen</td><td>The connecting admin, <strong>or</strong> an Entra admin</td><td>No Entra role if your tenant allows user consent. Otherwise Cloud Application Administrator or higher</td></tr>
+<tr><td>Activate team members</td><td>A TickPax Admin</td><td>TickPax role only. No Azure DevOps or Entra role</td></tr>
+</tbody></table></div>
+<p>One person who is a Project Collection Administrator <strong>and</strong> allowed to consent in Entra ID can complete the whole installation alone.</p>
+
+<hr />
+
+<h2 id="step-1"><span class="guide-step">1</span> Install the extension</h2>
+<ol>
+  <li>Open the <a href="https://marketplace.visualstudio.com/items?itemName=TickPax-Labs.tick-pax" target="_blank" rel="noopener">TickPax listing on the Visual Studio Marketplace</a> and select <strong>Get</strong>.</li>
+  <li>Choose your Azure DevOps organization from the list.</li>
+  <li>Review the permissions the extension asks for (explained in <a href="#scopes">Extension scopes</a>) and select <strong>Install</strong>.</li>
+</ol>
+
+<figure class="shot">
+  <a href="/assets/install/01-marketplace-listing.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/01-marketplace-listing.png" alt="The TickPax listing on the Visual Studio Marketplace: name, publisher, description, and the Get button with a 30-day free trial" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>The TickPax listing on the Visual Studio Marketplace.</figcaption>
+</figure>
+
+<figure class="shot">
+  <a href="/assets/install/02-marketplace-select-org.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/02-marketplace-select-org.png" alt="The Marketplace install screen: an organization picker, the list of permissions TickPax requests, and the Install button" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Pick your organization, review the permissions, then install.</figcaption>
+</figure>
+
+<blockquote><strong>See "Request" instead of "Install"?</strong> You are not a Project Collection Administrator. The request goes to your organization's administrators, who approve it under <em>Organization settings → Extensions → Requested</em>. This is an Azure DevOps control, and TickPax cannot bypass it.</blockquote>
+
+<hr />
+
+<h2 id="step-2"><span class="guide-step">2</span> Open TickPax in Organization settings</h2>
+<p>In Azure DevOps, select <strong>Organization settings</strong> (bottom-left corner), then <strong>TickPax</strong> in the left menu. The first time you open it, the <strong>Setup (Required)</strong> tab shows the setup wizard.</p>
+
+<figure class="shot shot-optional">
+  <a href="/assets/install/03-org-settings-menu.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/03-org-settings-menu.png" alt="Azure DevOps Organization settings, with TickPax selected in the left menu and the TickPax Organization Settings page open on the Setup (Required) tab" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>TickPax lives in Organization settings. Only collection administrators can see this page.</figcaption>
+</figure>
+
+<p>Until registration is complete, anyone who opens TickPax inside a project sees the message below instead of their data. It goes away by itself once you finish step 3.</p>
+
+<figure class="shot shot-narrow">
+  <a href="/assets/install/16-not-set-up.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/16-not-set-up.png" alt="TickPax message: TickPax isn't set up for this organization yet. An Azure DevOps administrator needs to register this organization by running the setup wizard, with a Check again button" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>What team members see before an administrator registers the organization.</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="step-3"><span class="guide-step">3</span> Register your organization</h2>
+<p>The wizard has five steps: <em>Welcome → Confirm Organization → Register → Connect Backend → Complete</em>. Registration is the only way a TickPax organization is created, and running it again is safe: an already-registered organization is simply verified.</p>
+
+<h3>Welcome</h3>
+<p>This step shows what setup does, including the eight default time categories it will create: Development, Testing, Documentation, Code Review, Bug Fixing and Research (billable), and Meetings and Planning (non-billable). You can rename, recolor or remove them later. Select <strong>Get Started</strong>.</p>
+
+<figure class="shot">
+  <a href="/assets/install/04-wizard-welcome.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/04-wizard-welcome.png" alt="Setup wizard step 1 of 5, Welcome: what setup does, and a preview of the eight categories it will create" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Step 1 of 5: Welcome.</figcaption>
+</figure>
+
+<h3>Confirm Organization</h3>
+<p>TickPax reads your organization's name, URL and ID directly from Azure DevOps, so there is nothing to type. Check that it is the organization you intend to set up, then select <strong>Continue</strong>.</p>
+
+<figure class="shot">
+  <a href="/assets/install/05-wizard-confirm-org.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/05-wizard-confirm-org.png" alt="Setup wizard step 2 of 5, Confirm Your Organization: the detected organization name, URL and ID" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Step 2 of 5: your organization is detected automatically.</figcaption>
+</figure>
+
+<h3>Register</h3>
+<p>Select <strong>Register Organization</strong>. TickPax then:</p>
+<ul>
+  <li><strong>confirms you are a Project Collection Administrator</strong>, by asking Azure DevOps directly with your own sign-in. A Project Administrator on a single project cannot register an organization;</li>
+  <li>creates your TickPax organization on the <strong>Free</strong> plan and adds the default categories;</li>
+  <li>makes <strong>you</strong> its first TickPax <strong>Admin</strong>.</li>
+</ul>
+<p>When <em>Registration Complete!</em> appears, select <strong>Connect Backend</strong>.</p>
+
+<figure class="shot shot-optional">
+  <a href="/assets/install/06-wizard-register-success.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/06-wizard-register-success.png" alt="Setup wizard step 3 of 5, Register Organization, showing the Registration Complete message and the Connect Backend button" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Step 3 of 5: registration complete.</figcaption>
+</figure>
+
+<blockquote id="entra-required"><strong>"This organization does not appear to be connected to Microsoft Entra."</strong> TickPax confirms who you are, and that you are an administrator, from the Microsoft Entra sign-in token Azure DevOps issues for your organization. An organization created with a personal Microsoft account has no Entra directory behind it, so that token does not exist and registration cannot finish. An organization owner can connect a directory under <em>Organization settings → Microsoft Entra</em> (a free Entra tenant is enough). Then sign out of Azure DevOps, sign back in, and run the wizard again.</blockquote>
+
+<figure class="shot shot-optional">
+  <a href="/assets/install/07-wizard-entra-warning.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/07-wizard-entra-warning.png" alt="The Register step showing the warning that the organization does not appear to be connected to Microsoft Entra" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>What you see if your organization has no Entra directory.</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="step-4"><span class="guide-step">4</span> Connect TickPax to Azure DevOps</h2>
+<p>This step lets TickPax read your organization's activity in the background, when nobody has TickPax open.</p>
+<ol>
+  <li>Select <strong>Connect to Azure DevOps</strong>. A Microsoft sign-in window opens.</li>
+  <li>Sign in with your work account. If TickPax has not been approved in your tenant yet, Microsoft shows a permission request: select <strong>Accept</strong>. If it has already been approved, for example by an Entra administrator for the whole organization, there is nothing to accept and the window closes on its own right after sign-in.</li>
+  <li>The button changes to <strong>✓ Connected</strong>, with the date the current access token expires. TickPax renews it automatically.</li>
+  <li>Select <strong>Continue</strong>, then <strong>Finish Setup</strong>.</li>
+</ol>
+
+<figure class="shot">
+  <a href="/assets/install/08-wizard-connect.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/08-wizard-connect.png" alt="Setup wizard step 4 of 5, Connect to TickPax Backend, with the Connect to Azure DevOps button" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Step 4 of 5: start the Microsoft sign-in.</figcaption>
+</figure>
+
+<figure class="shot shot-optional">
+  <a href="/assets/install/09-microsoft-consent.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/09-microsoft-consent.png" alt="The Microsoft Permissions requested dialog for TickPax, listing access to Azure DevOps and the Accept button" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Microsoft's consent screen. Its wording is explained under <a href="#consent-wording">"Full access to Azure DevOps"</a>.</figcaption>
+</figure>
+
+<figure class="shot">
+  <a href="/assets/install/10-wizard-connected.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/10-wizard-connected.png" alt="The TickPax Setup tab after setup: Setup Complete, the organization details, and an Azure DevOps Connection section showing Connected, the token expiry time and a Disconnect button" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Connected. After setup, the <strong>Setup</strong> tab always shows the connection status, with <strong>Disconnect</strong> next to it.</figcaption>
+</figure>
+
+<p><strong>Skip for Now</strong> also finishes setup without connecting. TickPax then cannot read any activity, and the summary screen reminds you to connect later: open the <strong>Setup</strong> tab again and select <strong>Connect to Azure DevOps</strong>.</p>
+
+<figure class="shot">
+  <a href="/assets/install/10-wizard-complete.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/10-wizard-complete.png" alt="Setup wizard step 5 of 5, Setup Complete: the organization, 8 categories configured, status Active, and next steps including a reminder to connect to the backend" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Step 5 of 5: Complete. This organization skipped the connection, so the next steps include connecting.</figcaption>
+</figure>
+
+<h3>Which account should connect?</h3>
+<p>TickPax acts <strong>as the account that connects</strong>, with exactly that account's permissions and nothing more. That has two consequences:</p>
+<ul>
+  <li><strong>TickPax only sees what that account can see.</strong> If the account has no access to a project, that project's activity is invisible to TickPax. This is the most common cause of "TickPax isn't seeing my work".</li>
+  <li><strong>The account should be a Project Collection Administrator with a Basic license.</strong> TickPax uses it to list your organization's members, to create service hooks in each project, and to read repositories, pull requests and work items.</li>
+</ul>
+<blockquote><strong>Larger organizations:</strong> connect with a dedicated named account, for example <code>svc-tickpax@yourcompany.com</code>, that is a Project Collection Administrator with a Basic license. A personal account works, but the connection breaks when that person leaves or their permissions change.</blockquote>
+
+<h3>What happens next, automatically</h3>
+<p>Within a few minutes of connecting, TickPax:</p>
+<ul>
+  <li><strong>discovers every project the connecting account can see</strong>, and picks up new projects as they are created;</li>
+  <li><strong>creates seven service hook subscriptions in each project</strong>, so activity reaches TickPax in near real time: <code>git.push</code>, <code>git.pullrequest.created</code>, <code>git.pullrequest.updated</code>, <code>ms.vss-code.git-pullrequest-comment-event</code>, <code>workitem.created</code>, <code>workitem.updated</code> and <code>workitem.commented</code>.</li>
+</ul>
+<p>You can see them under <em>Project settings → Service hooks</em>. Registration is idempotent, so reconnecting never creates duplicates.</p>
+
+<figure class="shot">
+  <a href="/assets/install/11-service-hooks.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/11-service-hooks.png" alt="Azure DevOps Project settings, Service hooks page, listing the TickPax web hook subscriptions" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>The subscriptions TickPax creates, visible in each project's settings.</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="step-5"><span class="guide-step">5</span> Review your settings</h2>
+<p>Open the <strong>Settings</strong> tab. The defaults work, but a minute here makes the first proposals more accurate:</p>
+<ul>
+  <li><strong>Working Hours</strong>: your team's normal working day.</li>
+  <li><strong>Categories</strong>: rename, recolor or add categories, and set which ones are billable.</li>
+  <li><strong>Projects</strong>: mark each project as billable or non-billable. This applies everywhere, including reports.</li>
+</ul>
+
+<figure class="shot">
+  <a href="/assets/install/12-settings-tab.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/12-settings-tab.png" alt="The TickPax Settings tab showing General Settings, Working Hours, Permissions, Calendar Settings, Categories and Projects" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>The Settings tab.</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="step-6"><span class="guide-step">6</span> Add your team</h2>
+<p><strong>Nobody sees any data until an Admin activates them.</strong> Open the <strong>Admin</strong> tab, then <strong>Users</strong>.</p>
+<ol>
+  <li>The <strong>Organization Members</strong> column lists your Azure DevOps organization's members. You can activate people before they have ever opened TickPax.</li>
+  <li><strong>Drag</strong> a member into <strong>Active Users</strong>.</li>
+  <li>In the panel on the right, tick at least one role:
+    <ul>
+      <li><strong>Developer</strong> reviews their own proposals and logs their own time;</li>
+      <li><strong>Manager</strong> also sees team reports and approves time entries;</li>
+      <li><strong>Admin</strong> has full access, including users, settings and billing.</li>
+    </ul>
+  </li>
+  <li>Select <strong>Activate User</strong>. Access takes effect immediately.</li>
+</ol>
+
+<figure class="shot">
+  <a href="/assets/install/17-users-panel.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/17-users-panel.png" alt="TickPax user management: an Organization Members column, an Active Users column, and a detail panel with the Admin, Developer and Manager roles" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Drag members from the left to activate them, then pick their roles on the right.</figcaption>
+</figure>
+
+<p>The <strong>Free</strong> plan includes up to five active users. On a paid plan, every active user is one seat. Adding a user raises your seat count right away, and removing one takes effect at your next renewal.</p>
+
+<h3>If someone opens TickPax before you activate them</h3>
+<p>They are registered automatically and see the message below until an Admin activates them. They appear in your <strong>Organization Members</strong> column, ready to drag across. Once activated, they reload the page.</p>
+
+<figure class="shot shot-narrow">
+  <a href="/assets/install/13-member-awaiting-activation.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/13-member-awaiting-activation.png" alt="The TickPax screen a team member sees before activation: Your seat is awaiting activation" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>What a team member sees before an Admin activates them.</figcaption>
+</figure>
+
+<blockquote><strong>Licenses:</strong> a team member needs a <strong>Basic</strong> Azure DevOps access level to generate meaningful activity. Stakeholders can be activated, but they produce no commit or pull request signal.</blockquote>
+
+<hr />
+
+<h2 id="step-7"><span class="guide-step">7</span> Choose a plan (optional)</h2>
+<p>Every organization starts on <strong>Free</strong>: up to five active users, with the full feature set. To move a larger team onto TickPax, open <strong>Admin → Subscription</strong>:</p>
+<ol>
+  <li>Under <strong>Choose package</strong>, select <strong>Basic</strong> or <strong>Pro</strong>, and choose a monthly or annual billing cycle.</li>
+  <li>Check the <strong>seat count</strong> and the total. You don't type the seat count in: it is the number of active users under <em>Admin → Users</em>.</li>
+  <li>Select <strong>Checkout</strong>. Payment is handled by Dodo Payments, our Merchant of Record, which issues your invoice and handles sales tax and VAT.</li>
+</ol>
+<p>Paid plans start with a <strong>30-day free trial</strong>. You are not charged until it ends, and adding teammates during the trial does not trigger an early charge. Plans and limits are listed on the <a href="/#pricing">pricing page</a>.</p>
+
+<figure class="shot">
+  <a href="/assets/install/14-subscription.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/14-subscription.png" alt="The TickPax Subscription tab: current plan, this month's usage, package choice, seat count and the Checkout button" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Admin → Subscription.</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="step-8"><span class="guide-step">8</span> Start using TickPax</h2>
+<p>Team members need no setup. In any project, they open <strong>TickPax</strong> in the left menu. Opening it signs them in through Azure DevOps, with no password, separate account or personal access token.</p>
+<ul>
+  <li><strong>Time Recovery</strong>: daily and weekly AI proposals to review, edit, accept or reject.</li>
+  <li><strong>Calendar</strong>: logged time across the month, and manual entries.</li>
+  <li><strong>Insights</strong>: team reports, AI accuracy and recovered hours, for Managers and Admins.</li>
+  <li>A <strong>TickPax</strong> tab on every work item, for time against that item.</li>
+</ul>
+
+<figure class="shot shot-narrow">
+  <a href="/assets/install/18-project-menu.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/18-project-menu.png" alt="An Azure DevOps project's left menu, with TickPax listed below Boards, Repos, Pipelines, Test Plans and Artifacts" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>TickPax in a project's left menu, below the built-in Azure DevOps services.</figcaption>
+</figure>
+
+<figure class="shot">
+  <a href="/assets/install/15-time-recovery.png" target="_blank" rel="noopener" title="Open full size"><img src="/assets/install/15-time-recovery.png" alt="The TickPax Time Recovery hub: AI confidence, time recovered and activities detected, a timeline of the day's commits, and AI time recommendations ready to review" loading="lazy" onerror="this.closest('figure').classList.add('shot-missing')" /></a>
+  <figcaption>Time Recovery: the day's activity on the left, AI time proposals to review on the right.</figcaption>
+</figure>
+
+<p>TickPax reads your existing Azure DevOps history, so the first proposals can appear the same day. New activity typically turns into a proposal within minutes of a commit or pull request comment. <strong>Nothing is ever logged without a person approving it.</strong></p>
+
+<hr />
+
+<h2 id="entra">For your Microsoft Entra administrator</h2>
+
+<h3 id="entra-admin">Do you need an Entra administrator?</h3>
+<p>That depends on one tenant setting: <em>Entra admin center → Enterprise applications → Consent and permissions → User consent settings</em>.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Your tenant setting</th><th>What happens</th></tr></thead>
+<tbody>
+<tr><td><strong>Allow user consent for apps</strong> (Microsoft's default)</td><td>The connecting admin selects Accept. No Entra administrator needed.</td></tr>
+<tr><td>Allow user consent for apps from verified publishers, for selected permissions</td><td>Usually works. If Azure DevOps <code>user_impersonation</code> is not on your allow-list, use the admin path below.</td></tr>
+<tr><td><strong>Do not allow user consent</strong></td><td>The user sees error <strong>AADSTS65001</strong> or an "approval required" screen. An administrator must grant consent.</td></tr>
+</tbody></table></div>
+
+<h3>Granting admin consent</h3>
+<p>Any one of these Entra roles can approve TickPax: <strong>Cloud Application Administrator</strong> (recommended, least privilege), Application Administrator, Privileged Role Administrator or Global Administrator.</p>
+<p><strong>Option A: the Entra admin connects.</strong> If the Entra admin is also a Project Collection Administrator, they run step 4 themselves and tick <em>Consent on behalf of your organization</em>.</p>
+<p><strong>Option B: pre-approve, then connect.</strong> The Entra admin opens this address once, signs in and approves. The Azure DevOps admin then completes step 4 with no consent prompt.</p>
+<pre class="guide-code"><code>https://login.microsoftonline.com/&lt;your-tenant-id&gt;/adminconsent?client_id=aa79e623-77cb-403c-a260-8e9a1bc9a739</code></pre>
+<p>If your tenant uses the <strong>admin consent workflow</strong>, the user can instead request approval from the consent screen. Reviewers approve it under <em>Enterprise applications → Admin consent requests</em>.</p>
+
+<h3>The application</h3>
+<div class="table-scroll"><table>
+<tbody>
+<tr><th>Application name</th><td>TickPax</td></tr>
+<tr><th>Application (client) ID</th><td><code>aa79e623-77cb-403c-a260-8e9a1bc9a739</code></td></tr>
+<tr><th>Type</th><td>Multi-tenant confidential client, authorization code flow with PKCE (S256)</td></tr>
+<tr><th>Redirect URI</th><td><code>https://api.tickpax.com/api/oauth/callback</code></td></tr>
+<tr><th>Permissions</th><td>Azure DevOps <code>user_impersonation</code> (delegated), plus <code>openid</code>, <code>profile</code>, <code>offline_access</code></td></tr>
+</tbody></table></div>
+<p>TickPax requests <strong>no</strong> Microsoft Graph permissions, <strong>no</strong> application-only permissions, no mail or file access, and no personal access tokens. After the first connection, it appears under <em>Enterprise applications → All applications → TickPax</em>, where you can review, restrict or remove it.</p>
+
+<h3 id="consent-wording">"Full access to Azure DevOps": what the consent screen means</h3>
+<p>Microsoft's consent screen says TickPax will <strong>"Have full access to Azure DevOps services."</strong> That wording is Microsoft's, and we would rather you see it here first than be surprised by it.</p>
+<p>Azure DevOps offers third-party apps exactly <strong>one</strong> delegated permission, <code>user_impersonation</code>. There is no read-only or per-project version, so every Azure DevOps integration that signs in through Entra ID shows this same text. What actually limits TickPax is:</p>
+<ol>
+  <li><strong>the extension scopes</strong> Azure DevOps enforces and showed you at install (<a href="#scopes">listed below</a>);</li>
+  <li><strong>the connecting account's own permissions</strong>, which TickPax can never exceed;</li>
+  <li><strong>what TickPax actually calls</strong>, set out in the <a href="/privacy">Privacy Policy</a>.</li>
+</ol>
+<p>If your policy needs a hard technical limit rather than a documented one, connect with an account whose Azure DevOps access covers only the projects you want tracked.</p>
+
+<h3>Settings that silently block the connection</h3>
+<ul>
+  <li><strong>User assignment required</strong> (<em>Enterprise applications → TickPax → Properties</em>): only assigned users can connect. Assign at least the connecting account.</li>
+  <li><strong>Conditional Access</strong> policies on the Azure DevOps cloud app (MFA, compliant device, trusted location) also apply to TickPax's background token renewal. If a policy needs an interactive step that renewal cannot perform, the connection expires and has to be reconnected. To diagnose, filter <em>Entra → Sign-in logs</em> by Application = TickPax.</li>
+  <li><strong>Consent policies that block unverified publishers.</strong></li>
+</ul>
+<p><strong>Does "Third-party application access via OAuth" need enabling in Azure DevOps?</strong> No. That policy covers legacy Azure DevOps OAuth apps. TickPax signs in through Microsoft Entra ID, so the setting does not apply.</p>
+
+<hr />
+
+<h2 id="security">For your security review</h2>
+
+<h3 id="scopes">Extension scopes</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>Scope</th><th>Why TickPax needs it</th></tr></thead>
+<tbody>
+<tr><td><code>vso.work_write</code></td><td>Read work items, their history and iterations; write a time value back to a work item after a person approves a proposal</td></tr>
+<tr><td><code>vso.project</code></td><td>List projects and teams</td></tr>
+<tr><td><code>vso.code</code></td><td>Read commit metadata, changed file paths, pull requests and review activity. Microsoft describes this scope as including source code, but no finer-grained scope covers commits. <strong>TickPax never calls the file-content, blob or diff endpoints</strong></td></tr>
+<tr><td><code>vso.build</code>, <code>vso.release</code></td><td>Reserved for future build and release signals. <strong>No TickPax code path uses them today</strong></td></tr>
+<tr><td><code>vso.hooks_write</code></td><td>Create the service hook subscriptions listed in step 4</td></tr>
+</tbody></table></div>
+<p>TickPax's only writes to your organization are a time value on a work item after a person approves it, and the service hook subscriptions. It cannot push code, change pull requests, change permissions or delete anything.</p>
+
+<h3>Data, in short</h3>
+<ul>
+  <li><strong>Never read:</strong> source code, file contents, line-level diffs, build, release or pipeline data, wikis, test plans, and anything in Microsoft 365.</li>
+  <li><strong>Text your engineers write</strong> (commit messages, review comments, work item descriptions and comments) is read in transit to count activity and find work item references. It is <strong>discarded before anything is stored</strong>. Work item titles are the one exception, kept so TickPax can display them.</li>
+  <li><strong>The AI never receives text your engineers wrote</strong>, on any path. It receives timings, counts and opaque tokens. Your data is not used to train AI models.</li>
+  <li>Data is stored in the European Union, and OAuth tokens are encrypted at rest.</li>
+</ul>
+<p>The complete field-by-field inventory, retention periods and sub-processors are in the <a href="/privacy">Privacy Policy</a> and the <a href="/dpa">Data Processing Addendum</a>.</p>
+
+<hr />
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead>
+<tbody>
+<tr><td>Marketplace shows <strong>Request</strong>, not Install</td><td>You are not a Project Collection Administrator</td><td>Ask an administrator to install, or to approve your request</td></tr>
+<tr><td>Can't find TickPax in Organization settings</td><td>Not installed in this organization, or you are not a collection administrator</td><td>Check <em>Organization settings → Extensions → Installed</em></td></tr>
+<tr><td><em>You must be a Project Collection Administrator</em></td><td>A genuine permission gap</td><td>Add the account to Project Collection Administrators, then reload</td></tr>
+<tr><td><em>Verification unavailable</em></td><td>Your Azure DevOps session token expired during the check</td><td>Reload the page and retry. This is not a permission failure</td></tr>
+<tr><td><em>Not connected to Microsoft Entra</em>, or registration fails with <strong>HTTP 401</strong></td><td>The organization has no Entra directory</td><td>Connect one (<a href="#entra-required">see step 3</a>), sign out and back in, then retry. Retrying alone will not fix it</td></tr>
+<tr><td>Sign-in window never opens</td><td>Pop-up blocker</td><td>Allow pop-ups for <code>dev.azure.com</code></td></tr>
+<tr><td><strong>AADSTS65001</strong> or "approval required"</td><td>Your tenant blocks user consent</td><td>See <a href="#entra-admin">Granting admin consent</a></td></tr>
+<tr><td>Organization Members list is empty</td><td>The connecting account cannot read the organization's member list</td><td>Reconnect with a Project Collection Administrator account</td></tr>
+<tr><td>Connected, but no proposals for a project</td><td>The connecting account cannot see that project</td><td>Give the connecting account access to the project. TickPax picks it up automatically</td></tr>
+<tr><td>Team member sees <em>Your seat is awaiting activation</em></td><td>They have not been activated yet</td><td>Activate them under <em>Admin → Users</em></td></tr>
+<tr><td>Can't activate another user</td><td>Free plan limit of five active users, or the seat count is reached</td><td>Raise seats or change plan under <em>Admin → Subscription</em></td></tr>
+<tr><td>Worked, then stopped after some weeks</td><td>The connection expired: a password change, Conditional Access, or the connecting account left</td><td>Reconnect on the <strong>Setup</strong> tab</td></tr>
+<tr><td><strong>403 Identity mismatch</strong> on sign-in</td><td>A deliberate anti-impersonation check</td><td>Contact support</td></tr>
+</tbody></table></div>
+<p>Still stuck? Email <a href="mailto:support@tickpax.com">support@tickpax.com</a> with your organization name, the exact error text and, for sign-in failures, the <code>AADSTS</code> code.</p>
+
+<hr />
+
+<h2 id="revoke">Removing TickPax</h2>
+<p>Each of these stops TickPax on its own, immediately:</p>
+<ol>
+  <li><strong>In TickPax:</strong> <em>Organization settings → TickPax → Setup → Disconnect</em> deletes the stored access tokens.</li>
+  <li><strong>In Azure DevOps:</strong> uninstall the extension under <em>Organization settings → Extensions</em>. To remove the service hooks too, delete them under <em>Project settings → Service hooks</em>.</li>
+  <li><strong>In Entra ID:</strong> delete the app under <em>Enterprise applications → TickPax → Properties</em>, or remove its consent grant.</li>
+</ol>
+<p>Cancelling a paid plan is separate, under <em>Admin → Subscription</em>. See the <a href="/terms">Terms of Service</a>.</p>
+  </main>
+
+  <footer class="legal-footer">
+    <p>
+      <a href="/">TickPax</a> · Help with setup:
+      <a href="mailto:support@tickpax.com">support@tickpax.com</a>
+    </p>
+  </footer>
+</body>
+</html>
